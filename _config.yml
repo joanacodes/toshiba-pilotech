@@ -1,0 +1,34 @@
+title: Pilotech Toshiba
+description: Installateur agréé Toshiba en Île-de-France — climatisation & pompes à chaleur
+lang: fr
+company:
+  name: Pilotech
+  phone: "01 85 44 12 53"
+  phone_href: "tel:0185441253"
+  email: "info@pilotech.eu"
+  reviews_short: "5/5"
+  reviews_count: "79 avis Google"
+  address_line1: "Île-de-France"
+  address_line2: "Paris et région parisienne"
+social: { facebook: "#", instagram: "#", linkedin: "#" }
+nav:
+  - { title: "Accueil", url: "/" }
+  - { title: "À propos", url: "/a-propos/" }
+  - { title: "Gammes Toshiba", url: "/gammes-toshiba/" }
+  - { title: "Réalisations", url: "/realisations/" }
+  - { title: "Témoignages", url: "/temoignages/" }
+  - { title: "Contact", url: "/contact/" }
+products:
+  - { name: "Shorai Edge", url: "/gammes/shorai-edge/" }
+  - { name: "Shorai Curve", url: "/gammes/shorai-curve/" }
+  - { name: "Mural Yukai", url: "/gammes/mural-yukai/" }
+  - { name: "Mural Haori", url: "/gammes/mural-haori/" }
+  - { name: "Mural Naka", url: "/gammes/mural-naka/" }
+  - { name: "Mural Daiseikai 10", url: "/gammes/daiseikai-10/" }
+  - { name: "Super Heating", url: "/gammes/super-heating/" }
+  - { name: "Gainable Compact", url: "/gammes/gainable-compact/" }
+  - { name: "Gainable Standard", url: "/gammes/gainable-standard/" }
+  - { name: "Console double-flux", url: "/gammes/console-double-flux/" }
+baseurl: ""
+url: ""
+exclude: [README.md, Gemfile, Gemfile.lock, package.json, package-lock.json, node_modules, src, tailwind.config.js]

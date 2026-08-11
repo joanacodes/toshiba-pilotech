@@ -1,0 +1,42 @@
+<header id="header" class="sticky top-0 z-50 flex w-full shadow-sm bg-white">
+  <div class="hidden lg:flex w-64 items-center justify-center bg-white border-r">
+    <a href="{{ '/' | relative_url }}" class="text-2xl font-bold flex items-center space-x-2">
+      <i class="fa-solid fa-snowflake text-primary text-2xl"></i>
+      <span class="text-gray-900 tracking-tight">Pilotech</span>
+    </a>
+  </div>
+  <div class="flex-1 flex flex-col border-l border-gray-100">
+    <div class="lg:flex px-8 py-2 text-xs font-medium text-gray-500 border-b border-gray-100 items-center flex flex-row justify-between">
+      <div class="flex space-x-4 mr-6 items-center">
+        <a href="{{ site.company.phone_href }}" class="hover:text-primary transition flex items-center"><i class="fa-solid fa-phone mr-2 text-gray-400"></i> {{ site.company.phone }}</a>
+        <span class="text-gray-300">|</span>
+        <a href="mailto:{{ site.company.email }}" class="hover:text-primary transition flex items-center"><i class="fa-solid fa-paper-plane mr-2 text-gray-400"></i> {{ site.company.email }}</a>
+        <span class="text-gray-300">|</span>
+        <span class="flex items-center"><i class="fa-solid fa-star text-primary mr-2"></i> {{ site.company.reviews_short }} - {{ site.company.reviews_count }}</span>
+      </div>
+      <div class="flex items-center space-x-4 pl-4 border-l border-gray-100 text-sm">
+        <a href="{{ site.social.facebook }}" class="hover:text-primary transition text-gray-700"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="{{ site.social.instagram }}" class="hover:text-primary transition text-gray-700"><i class="fa-brands fa-instagram"></i></a>
+        <a href="{{ site.social.linkedin }}" class="hover:text-primary transition text-gray-700"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="flex justify-between items-center px-4 lg:px-8 py-4 lg:py-3">
+      <nav class="hidden lg:flex items-center space-x-8 font-semibold text-gray-700 text-sm">
+        {% for item in site.nav %}
+          {% if page.url == item.url %}
+            <a href="{{ item.url | relative_url }}" class="text-primary border-b-2 border-primary pb-1">{{ item.title }}</a>
+          {% else %}
+            <a href="{{ item.url | relative_url }}" class="hover:text-primary transition pb-1">{{ item.title }}</a>
+          {% endif %}
+        {% endfor %}
+      </nav>
+      <div class="flex items-center space-x-4 lg:hidden">
+        <a href="{{ '/contact/' | relative_url }}" class="px-4 py-2 bg-primary text-white font-semibold rounded text-sm">Devis</a>
+        <button id="open-drawer" class="text-gray-600 text-2xl focus:outline-none" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="hidden lg:flex w-64 bg-black items-center justify-center">
+    <a href="{{ '/contact/' | relative_url }}" class="inline-flex items-center justify-center px-6 py-2.5 bg-primary hover:bg-primary-dark text-white font-semibold rounded transition duration-300"><i class="fa-solid fa-file-invoice mr-2"></i> Devis Gratuit</a>
+  </div>
+</header>

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar { display: none; }
+body { font-family: 'Inter', sans-serif; }
+
+.tab-active { border-bottom: 2px solid #E31837; color: #E31837; font-weight: 600; }
+
+.hero-bg {
+  background-image: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.65)), var(--hero-img, url('/assets/img/hero-default.jpg'));
+  background-size: cover; background-position: center;
+}

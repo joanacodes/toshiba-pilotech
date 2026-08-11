@@ -1,0 +1,19 @@
+{
+  "name": "pilotech-toshiba",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css": "tailwindcss -c tailwind.config.js -i src/input.css -o assets/css/style.css --minify",
+    "css:watch": "tailwindcss -c tailwind.config.js -i src/input.css -o assets/css/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2"
+  }
+}
