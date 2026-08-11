@@ -79,7 +79,12 @@ i[data-fa-i2svg]>svg{height:1em;width:1em}
 
 
 /* Garde-fous responsive : rien ne doit dépasser la largeur de l'écran */
-html,body{max-width:100%;overflow-x:hidden}
+/* overflow-x:clip et non hidden : 'hidden' crée un conteneur de défilement
+   sur l'ancêtre, ce qui neutralise position:sticky (header collé). */
+html,body{max-width:100%;overflow-x:clip}
+@supports not (overflow-x:clip){body{overflow-x:hidden}}
+/* Le header reste collé en haut, y compris sur mobile */
+#header{position:-webkit-sticky;position:sticky;top:0;z-index:50}
 img,video,svg,iframe{max-width:100%}
 img{height:auto}
 *,::before,::after{min-width:0}
