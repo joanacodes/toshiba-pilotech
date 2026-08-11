@@ -12,3 +12,24 @@
 .svg-inline--fa.fa-fw{width:1.25em}
 i[data-fa-i2svg]{display:inline-flex;align-items:center;line-height:1}
 i[data-fa-i2svg]>svg{height:1em;width:1em}
+
+
+/* Classes utilisées dans le HTML mais absentes de la compilation Tailwind livrée */
+.bg-darker{background-color:#0D0D0D}
+.from-darker{--tw-gradient-from:#0D0D0D var(--tw-gradient-from-position);--tw-gradient-to:rgb(13 13 13 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}
+.bg-accent{background-color:#E31837}
+.text-textgray{color:#6B7280}
+.bg-primary\/10{background-color:rgb(227 24 55 / .1)}
+.text-white\/80{color:rgb(255 255 255 / .8)}
+.no-underline{text-decoration-line:none}
+.gap-5{gap:1.25rem}
+.space-y-5>:not([hidden])~:not([hidden]){margin-top:1.25rem}
+.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}
+.mt-0\.5{margin-top:.125rem}
+.max-w-5xl{max-width:64rem}
+.tab-inactive{color:#6B7280;border-bottom:2px solid transparent}
+.tab-inactive:hover{color:#1A1A1A}
+.tab-active{color:#E31837;border-bottom:2px solid #E31837}
+@media (min-width:640px){.sm\:mb-0{margin-bottom:0}}
+@media (min-width:768px){.md\:bottom-12{bottom:3rem}}
+@media (min-width:1024px){.lg\:block{display:block}}
