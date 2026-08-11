@@ -29,6 +29,16 @@ products:
   - { name: "Gainable Compact", url: "/gammes/gainable-compact/" }
   - { name: "Gainable Standard", url: "/gammes/gainable-standard/" }
   - { name: "Console double-flux", url: "/gammes/console-double-flux/" }
-baseurl: ""
-url: ""
-exclude: [README.md, Gemfile, Gemfile.lock, package.json, package-lock.json, node_modules, src, tailwind.config.js]
+baseurl: "/toshiba-pilotech"
+url: "https://joanacodes.github.io"
+exclude:
+  [
+    README.md,
+    Gemfile,
+    Gemfile.lock,
+    package.json,
+    package-lock.json,
+    node_modules,
+    src,
+    tailwind.config.js,
+  ]
