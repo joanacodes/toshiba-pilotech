@@ -76,3 +76,23 @@ i[data-fa-i2svg]>svg{height:1em;width:1em}
 .prose li{margin:.5em 0}
 .prose a{color:#E31837;text-decoration:underline}
 .prose-lg{font-size:1.125rem;line-height:1.7778}
+
+
+/* Garde-fous responsive : rien ne doit dépasser la largeur de l'écran */
+html,body{max-width:100%;overflow-x:hidden}
+img,video,svg,iframe{max-width:100%}
+img{height:auto}
+*,::before,::after{min-width:0}
+
+/* Carrousel : défilement tactile sans barre visible */
+[data-carousel]{scrollbar-width:none;-ms-overflow-style:none}
+[data-carousel]::-webkit-scrollbar{display:none;height:0;width:0}
+
+.min-w-0{min-width:0}
+.max-w-full{max-width:100%}
+.whitespace-nowrap{white-space:nowrap}
+@media (min-width:640px){.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}}
+
+.bg-darker\/80{background-color:rgb(13 13 13 / .8)}
+.w-1\/2{width:50%}
+@media (min-width:1024px){.lg\:w-1\/2{width:50%}.lg\:bg-transparent{background-color:transparent}.lg\:bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.lg\:from-darker{--tw-gradient-from:#0D0D0D var(--tw-gradient-from-position);--tw-gradient-to:rgb(13 13 13 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.lg\:to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}}
