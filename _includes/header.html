@@ -1,12 +1,12 @@
 <header id="header" class="sticky top-0 z-50 flex w-full shadow-sm bg-white">
-  <div class="hidden lg:flex w-64 items-center justify-center bg-white border-r">
+  <div class="hidden lg:flex w-64 shrink-0 items-center justify-center bg-white border-r">
     <a href="{{ '/' | relative_url }}" class="text-2xl font-bold flex items-center space-x-2">
       <i class="fa-solid fa-snowflake text-primary text-2xl"></i>
       <span class="text-gray-900 tracking-tight">Pilotech</span>
     </a>
   </div>
   <div class="flex-1 flex flex-col border-l border-gray-100">
-    <div class="lg:flex px-8 py-2 text-xs font-medium text-gray-500 border-b border-gray-100 items-center flex flex-row justify-between">
+    <div class="hidden lg:flex px-8 py-2 text-xs font-medium text-gray-500 border-b border-gray-100 items-center flex-row justify-between">
       <div class="flex space-x-4 mr-6 items-center">
         <a href="{{ site.company.phone_href }}" class="hover:text-primary transition flex items-center"><i class="fa-solid fa-phone mr-2 text-gray-400"></i> {{ site.company.phone }}</a>
         <span class="text-gray-300">|</span>
@@ -20,7 +20,9 @@
         <a href="{{ site.social.linkedin }}" class="hover:text-primary transition text-gray-700"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
     </div>
-    <div class="flex justify-between items-center px-4 lg:px-8 py-4 lg:py-3">
+    <div class="flex justify-between items-center px-4 lg:px-8 py-3 lg:py-3 gap-3">
+        <a href="{{ '/' | relative_url }}" class="lg:hidden text-xl font-bold flex items-center gap-2 shrink-0">
+          <i class="fa-solid fa-snowflake text-primary"></i><span class="text-gray-900">Pilotech</span></a>
       <nav class="hidden lg:flex items-center space-x-8 font-semibold text-gray-700 text-sm">
         {% for item in site.nav %}
           {% if page.url == item.url %}
@@ -40,3 +42,23 @@
     <a href="{{ '/contact/' | relative_url }}" class="inline-flex items-center justify-center px-6 py-2.5 bg-primary hover:bg-primary-dark text-white font-semibold rounded transition duration-300"><i class="fa-solid fa-file-invoice mr-2"></i> Devis Gratuit</a>
   </div>
 </header>
+
+<div id="drawer-backdrop" class="hidden fixed inset-0 bg-black/50 z-[60] lg:hidden"></div>
+<nav id="mobile-drawer"
+  class="fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-white z-[70] shadow-xl translate-x-full transition-transform duration-300 lg:hidden flex flex-col">
+  <div class="flex items-center justify-between px-5 py-4 border-b border-gray-100">
+    <span class="font-bold text-lg">Menu</span>
+    <button id="close-drawer" aria-label="Fermer" class="text-2xl text-gray-500 hover:text-dark"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="flex flex-col p-5 gap-1 font-semibold text-gray-700 overflow-y-auto">
+    {% for item in site.nav %}
+    <a href="{{ item.url | relative_url }}" class="py-3 border-b border-gray-100 hover:text-primary transition">{{ item.title }}</a>
+    {% endfor %}
+    <a href="{{ '/contact/' | relative_url }}" class="mt-4 bg-primary text-white text-center font-semibold py-3 rounded hover:bg-primary-dark transition">Devis gratuit</a>
+    <div class="mt-6 text-sm font-normal text-gray-500 space-y-2">
+      <a href="{{ site.company.phone_href }}" class="flex items-center gap-2 hover:text-primary"><i class="fa-solid fa-phone"></i>{{ site.company.phone }}</a>
+      <a href="mailto:{{ site.company.email }}" class="flex items-center gap-2 hover:text-primary"><i class="fa-solid fa-paper-plane"></i>{{ site.company.email }}</a>
+      <span class="flex items-center gap-2"><i class="fa-solid fa-star text-primary"></i>{{ site.company.reviews_short }} — {{ site.company.reviews_count }}</span>
+    </div>
+  </div>
+</nav>

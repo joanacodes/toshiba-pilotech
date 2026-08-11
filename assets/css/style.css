@@ -33,3 +33,46 @@ i[data-fa-i2svg]>svg{height:1em;width:1em}
 @media (min-width:640px){.sm\:mb-0{margin-bottom:0}}
 @media (min-width:768px){.md\:bottom-12{bottom:3rem}}
 @media (min-width:1024px){.lg\:block{display:block}}
+
+
+/* Menu mobile + carrousel */
+.translate-x-full{--tw-translate-x:100%;transform:translate(var(--tw-translate-x),0)}
+.z-\[60\]{z-index:60}
+.z-\[70\]{z-index:70}
+.w-72{width:18rem}
+.max-w-\[85vw\]{max-width:85vw}
+.bg-black\/50{background-color:rgb(0 0 0 / .5)}
+.duration-300{transition-duration:300ms}
+.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:150ms}
+.overflow-y-auto{overflow-y:auto}
+.overflow-x-auto{overflow-x:auto}
+.snap-x{scroll-snap-type:x mandatory}
+.snap-start{scroll-snap-align:start}
+.scroll-smooth{scroll-behavior:smooth}
+.shrink-0{flex-shrink:0}
+.opacity-40{opacity:.4}
+.w-56{width:14rem}
+.h-28{height:7rem}
+.h-20{height:5rem}
+.gap-1{gap:.25rem}
+.gap-3{gap:.75rem}
+.-mx-1{margin-left:-.25rem;margin-right:-.25rem}
+.px-1{padding-left:.25rem;padding-right:.25rem}
+.h-\[280px\]{height:280px}
+[data-carousel]{scrollbar-width:thin}
+[data-carousel]::-webkit-scrollbar{height:6px}
+[data-carousel]::-webkit-scrollbar-thumb{background:#d1d5db;border-radius:3px}
+@media (min-width:640px){.sm\:w-64{width:16rem}.sm\:h-32{height:8rem}.sm\:h-24{height:6rem}.sm\:p-8{padding:2rem}.sm\:gap-4{gap:1rem}.sm\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:h-\[400px\]{height:400px}}
+
+.fixed{position:fixed}
+.px-5{padding-left:1.25rem;padding-right:1.25rem}
+.font-normal{font-weight:400}
+.space-y-2>:not([hidden])~:not([hidden]){margin-top:.5rem}
+.prose{max-width:65ch;color:#374151}
+.prose p{margin-top:1.25em;margin-bottom:1.25em;line-height:1.75}
+.prose h2{font-size:1.5em;font-weight:700;margin-top:2em;margin-bottom:1em;color:#111827}
+.prose h3{font-size:1.25em;font-weight:600;margin-top:1.6em;margin-bottom:.6em;color:#111827}
+.prose ul{list-style:disc;padding-left:1.6em;margin:1.25em 0}
+.prose li{margin:.5em 0}
+.prose a{color:#E31837;text-decoration:underline}
+.prose-lg{font-size:1.125rem;line-height:1.7778}
