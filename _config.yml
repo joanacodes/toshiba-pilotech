@@ -15,8 +15,6 @@ nav:
   - { title: "Accueil", url: "/" }
   - { title: "À propos", url: "/a-propos/" }
   - { title: "Gammes Toshiba", url: "/gammes-toshiba/" }
-  - { title: "Réalisations", url: "/realisations/" }
-  - { title: "Témoignages", url: "/temoignages/" }
   - { title: "Contact", url: "/contact/" }
 products:
   - { name: "Shorai Edge", url: "/gammes/shorai-edge/" }
@@ -31,14 +29,4 @@ products:
   - { name: "Console double-flux", url: "/gammes/console-double-flux/" }
 baseurl: "/toshiba-pilotech"
 url: "https://joanacodes.github.io"
-exclude:
-  [
-    README.md,
-    Gemfile,
-    Gemfile.lock,
-    package.json,
-    package-lock.json,
-    node_modules,
-    src,
-    tailwind.config.js,
-  ]
+exclude: [README.md, Gemfile, Gemfile.lock, package.json, package-lock.json, node_modules, src, tailwind.config.js]

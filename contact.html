@@ -1,0 +1,139 @@
+---
+layout: default
+title: "Contact & Devis gratuit — Pilotech, installateur agréé Toshiba"
+description: "Demandez votre devis gratuit pour l'installation d'une climatisation ou d'une pompe à chaleur Toshiba en Île-de-France. Réponse sous 24 h."
+permalink: /contact/
+---
+
+<!-- Page Header -->
+<section class="bg-dark text-white py-16 md:py-24">
+  <div class="container mx-auto px-4 md:px-8 text-center max-w-3xl">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Demandez votre devis gratuit</h1>
+    <p class="text-white/80 text-lg">
+      Un projet de climatisation ou de pompe à chaleur ? Décrivez-nous votre logement,
+      nous revenons vers vous sous 24 heures ouvrées avec une proposition chiffrée.
+    </p>
+  </div>
+</section>
+
+<!-- Coordonnées + formulaire -->
+<section class="py-16 container mx-auto px-4 md:px-8">
+  <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+
+    <!-- Coordonnées -->
+    <div>
+      <h2 class="text-2xl font-bold mb-6">Nous joindre directement</h2>
+
+      <div class="space-y-6">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mr-4 shrink-0">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div>
+            <div class="font-semibold mb-1">Téléphone</div>
+            <a href="{{ site.company.phone_href }}" class="text-gray-600 hover:text-primary transition">{{ site.company.phone }}</a>
+            <p class="text-sm text-gray-500 mt-1">Du lundi au vendredi, 9h – 18h</p>
+          </div>
+        </div>
+
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mr-4 shrink-0">
+            <i class="fa-solid fa-paper-plane"></i>
+          </div>
+          <div>
+            <div class="font-semibold mb-1">E-mail</div>
+            <a href="mailto:{{ site.company.email }}" class="text-gray-600 hover:text-primary transition">{{ site.company.email }}</a>
+          </div>
+        </div>
+
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mr-4 shrink-0">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div>
+            <div class="font-semibold mb-1">Zone d'intervention</div>
+            <p class="text-gray-600">{{ site.company.address_line1 }}</p>
+            <p class="text-gray-600">{{ site.company.address_line2 }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 p-6 bg-gray-50 rounded-xl border border-gray-100">
+        <div class="flex items-center mb-2">
+          <span class="text-primary font-bold text-lg mr-2">{{ site.company.reviews_short }}</span>
+          <span class="text-gray-600 text-sm">— {{ site.company.reviews_count }}</span>
+        </div>
+        <p class="text-sm text-gray-600">
+          Installateur agréé Toshiba. Installation, mise en service, entretien et dépannage
+          assurés par nos techniciens certifiés.
+        </p>
+      </div>
+    </div>
+
+    <!-- Formulaire -->
+    <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+      <h2 class="text-2xl font-bold mb-6">Votre demande</h2>
+
+      <form action="https://formsubmit.co/{{ site.company.email }}" method="POST" class="space-y-5">
+        <input type="hidden" name="_subject" value="Nouvelle demande de devis — site Pilotech">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="text" name="_honey" style="display:none">
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="nom" class="block text-sm font-semibold mb-2">Nom et prénom *</label>
+            <input type="text" id="nom" name="nom" required
+              class="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary transition">
+          </div>
+          <div>
+            <label for="telephone" class="block text-sm font-semibold mb-2">Téléphone *</label>
+            <input type="tel" id="telephone" name="telephone" required
+              class="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary transition">
+          </div>
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-semibold mb-2">E-mail *</label>
+          <input type="email" id="email" name="email" required
+            class="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary transition">
+        </div>
+
+        <div>
+          <label for="codepostal" class="block text-sm font-semibold mb-2">Code postal</label>
+          <input type="text" id="codepostal" name="codepostal" pattern="[0-9]{5}" placeholder="75010"
+            class="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary transition">
+        </div>
+
+        <div>
+          <label for="projet" class="block text-sm font-semibold mb-2">Votre projet</label>
+          <select id="projet" name="projet"
+            class="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary transition bg-white">
+            <option>Climatisation réversible — 1 pièce</option>
+            <option>Climatisation réversible — plusieurs pièces</option>
+            <option>Climatisation gainable</option>
+            <option>Pompe à chaleur</option>
+            <option>Entretien / dépannage</option>
+            <option>Autre</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-semibold mb-2">Précisions</label>
+          <textarea id="message" name="message" rows="5" placeholder="Surface, nombre de pièces, type de logement, délais souhaités…"
+            class="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary transition"></textarea>
+        </div>
+
+        <button type="submit"
+          class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3.5 px-8 rounded transition-colors">
+          Envoyer ma demande
+        </button>
+
+        <p class="text-xs text-gray-500">
+          Les champs marqués d'un astérisque sont obligatoires. Vos données servent uniquement
+          à traiter votre demande et ne sont jamais transmises à des tiers.
+        </p>
+      </form>
+    </div>
+
+  </div>
+</section>
