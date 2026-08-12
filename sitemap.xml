@@ -1,0 +1,18 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- assign pages = site.pages | where_exp: "p", "p.permalink" %}
+{%- for p in pages %}
+{%- unless p.permalink contains '.xml' or p.permalink contains '.txt' %}
+  <url>
+    <loc>{{ p.permalink | absolute_url }}</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    <changefreq>{% if p.permalink == '/' %}weekly{% else %}monthly{% endif %}</changefreq>
+    <priority>{% if p.permalink == '/' %}1.0{% elsif p.product_name %}0.8{% else %}0.7{% endif %}</priority>
+  </url>
+{%- endunless %}
+{%- endfor %}
+</urlset>

@@ -1,0 +1,148 @@
+{%- assign t = page.title | default: site.title -%}
+{%- assign d = page.description | default: site.description -%}
+{%- assign canonical = page.url | replace:'index.html','' | absolute_url -%}
+{%- assign ogimg = page.image | default: '/assets/img/toshiba/shorai-curve-noir-blanc.png' | absolute_url -%}
+
+<title>{{ t }}</title>
+<meta name="description" content="{{ d }}">
+<link rel="canonical" href="{{ canonical }}">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="{{ site.company.name }}">
+<meta name="geo.region" content="FR-IDF">
+<meta name="geo.placename" content="Paris, Île-de-France">
+
+<!-- Open Graph -->
+<meta property="og:type" content="{% if page.layout == 'post' or page.categories %}article{% else %}website{% endif %}">
+<meta property="og:site_name" content="{{ site.company.name }}">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="{{ t }}">
+<meta property="og:description" content="{{ d }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ ogimg }}">
+<meta property="og:image:alt" content="{{ page.product_name | default: 'Pilotech — installateur agréé Toshiba en Île-de-France' }}">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ t }}">
+<meta name="twitter:description" content="{{ d }}">
+<meta name="twitter:image" content="{{ ogimg }}">
+
+<!-- Entreprise locale -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "@id": "{{ '/' | absolute_url }}#business",
+  "name": "{{ site.company.name }}",
+  "description": "{{ site.description }}",
+  "url": "{{ '/' | absolute_url }}",
+  "telephone": "+33185441253",
+  "email": "{{ site.company.email }}",
+  "image": "{{ '/assets/img/toshiba/shorai-curve-noir-blanc.png' | absolute_url }}",
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Paris",
+    "addressRegion": "Île-de-France",
+    "addressCountry": "FR"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Paris" },
+    { "@type": "AdministrativeArea", "name": "Île-de-France" },
+    { "@type": "AdministrativeArea", "name": "Hauts-de-Seine" },
+    { "@type": "AdministrativeArea", "name": "Seine-Saint-Denis" },
+    { "@type": "AdministrativeArea", "name": "Val-de-Marne" },
+    { "@type": "AdministrativeArea", "name": "Yvelines" },
+    { "@type": "AdministrativeArea", "name": "Essonne" },
+    { "@type": "AdministrativeArea", "name": "Val-d'Oise" },
+    { "@type": "AdministrativeArea", "name": "Seine-et-Marne" }
+  ],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00", "closes": "18:00"
+  }],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "79"
+  },
+  "brand": { "@type": "Brand", "name": "Toshiba" },
+  "makesOffer": [
+    {% for p in site.products %}{
+      "@type": "Offer",
+      "itemOffered": { "@type": "Service", "name": "Installation {{ p.name }} Toshiba", "serviceType": "Installation de climatisation" },
+      "areaServed": { "@type": "AdministrativeArea", "name": "Île-de-France" }
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Climatisation et pompes à chaleur Toshiba",
+    "itemListElement": [
+      { "@type": "OfferCatalog", "name": "Climatisation réversible résidentielle" },
+      { "@type": "OfferCatalog", "name": "Pompes à chaleur air-air" },
+      { "@type": "OfferCatalog", "name": "Climatisation gainable" },
+      { "@type": "OfferCatalog", "name": "Solutions professionnelles" },
+      { "@type": "OfferCatalog", "name": "Entretien et dépannage" }
+    ]
+  }
+}
+</script>
+
+<!-- Site -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "{{ '/' | absolute_url }}#website",
+  "url": "{{ '/' | absolute_url }}",
+  "name": "{{ site.company.name }}",
+  "inLanguage": "fr-FR",
+  "publisher": { "@id": "{{ '/' | absolute_url }}#business" }
+}
+</script>
+
+{%- if page.product_name %}
+<!-- Produit -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Toshiba {{ page.product_name }}",
+  "description": "{{ d }}",
+  "image": "{{ ogimg }}",
+  "brand": { "@type": "Brand", "name": "Toshiba" },
+  "category": "{{ page.product_category | default: 'Climatisation réversible' }}",
+  "url": "{{ canonical }}",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "priceCurrency": "EUR",
+    "url": "{{ '/contact/' | absolute_url }}",
+    "seller": { "@id": "{{ '/' | absolute_url }}#business" }
+  }
+}
+</script>
+{%- endif %}
+
+{%- if page.url != '/' %}
+<!-- Fil d'Ariane -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ '/' | absolute_url }}" }
+    {%- if page.product_name -%}
+    ,{ "@type": "ListItem", "position": 2, "name": "Gammes Toshiba", "item": "{{ '/gammes-toshiba/' | absolute_url }}" },
+    { "@type": "ListItem", "position": 3, "name": "{{ page.product_name }}", "item": "{{ canonical }}" }
+    {%- else -%}
+    ,{ "@type": "ListItem", "position": 2, "name": "{{ page.breadcrumb | default: t | split: ' —' | first }}", "item": "{{ canonical }}" }
+    {%- endif %}
+  ]
+}
+</script>
+{%- endif %}
