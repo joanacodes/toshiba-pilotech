@@ -146,3 +146,20 @@
 }
 </script>
 {%- endif %}
+
+{%- if page.video_id %}
+<!-- Vidéo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Toshiba {{ page.product_name }} — présentation",
+  "description": "{{ d }}",
+  "thumbnailUrl": "https://i.ytimg.com/vi/{{ page.video_id }}/maxresdefault.jpg",
+  "uploadDate": "2025-01-01",
+  "embedUrl": "https://www.youtube-nocookie.com/embed/{{ page.video_id }}",
+  "contentUrl": "https://www.youtube.com/watch?v={{ page.video_id }}",
+  "publisher": { "@id": "{{ '/' | absolute_url }}#business" }
+}
+</script>
+{%- endif %}
