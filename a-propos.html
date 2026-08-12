@@ -318,15 +318,24 @@ image: "/assets/img/toshiba/gainable-standard-photo-2-slideshow.jpg"
                 <div class="bg-[#1C1C1C] p-10 rounded-lg text-white">
                     <h3 class="text-3xl font-bold mb-4">Posez Votre Question !</h3>
                     <p class="text-gray-400 mb-8 text-sm">Remplissez le formulaire pour une assistance rapide et un support expert.</p>
-                    <form class="space-y-4">
-                        <input type="text" placeholder="Nom" class="w-full bg-[#2A2A2A] border border-gray-700 text-white placeholder-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary">
-                        <input type="email" placeholder="Adresse e-mail" class="w-full bg-[#2A2A2A] border border-gray-700 text-white placeholder-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary">
-                        <input type="text" placeholder="Objet de votre demande" class="w-full bg-[#2A2A2A] border border-gray-700 text-white placeholder-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary">
-                        <textarea placeholder="Tapez votre message ici..." rows="4" class="w-full bg-[#2A2A2A] border border-gray-700 text-white placeholder-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary resize-none"></textarea>
-                        <button type="submit" class="bg-primary hover:bg-red-700 text-white font-medium py-3 px-8 rounded transition-colors mt-4 inline-block">
-                            Envoyer le Message
-                        </button>
-                    </form>
+                    <form action="{{ site.forms.endpoint_base }}{{ site.forms.destinataire }}" method="POST" class="space-y-4">
+              {% include form-fields.html subject="Message — page À propos" %}
+              <label for="ap-nom" class="sr-only">Nom</label>
+              <input id="ap-nom" type="text" name="nom" required placeholder="Nom" class="w-full bg-[#2A2A2A] border border-gray-700 text-white placeholder-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary">
+              <label for="ap-email" class="sr-only">Adresse e-mail</label>
+              <input id="ap-email" type="email" name="email" required placeholder="Adresse e-mail" class="w-full bg-[#2A2A2A] border border-gray-700 text-white placeholder-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary">
+              <label for="ap-objet" class="sr-only">Objet</label>
+              <input id="ap-objet" type="text" name="objet" placeholder="Objet de votre demande" class="w-full bg-[#2A2A2A] border border-gray-700 text-white placeholder-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary">
+              <label for="ap-msg" class="sr-only">Message</label>
+              <textarea id="ap-msg" name="message" required placeholder="Tapez votre message ici..." rows="4" class="w-full bg-[#2A2A2A] border border-gray-700 text-white placeholder-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary resize-none"></textarea>
+              <label class="flex items-start gap-3 text-xs text-gray-400">
+                <input type="checkbox" name="consentement" value="oui" required class="mt-0.5 shrink-0">
+                <span>J'accepte que mes données soient utilisées pour traiter ma demande. *</span>
+              </label>
+              <button type="submit" class="bg-primary hover:bg-primary-dark text-white font-medium py-3 px-8 rounded transition-colors mt-4 inline-block">
+                Envoyer le message
+              </button>
+            </form>
                 </div>
             </div>
         </div>

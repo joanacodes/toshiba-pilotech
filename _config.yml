@@ -10,6 +10,19 @@ company:
   reviews_count: "79 avis Google"
   address_line1: "Île-de-France"
   address_line2: "Paris et région parisienne"
+forms:
+  # ============================================================
+  #  ADRESSE DE RÉCEPTION DES FORMULAIRES — modifie ICI, c'est tout
+  #  Tous les formulaires du site (accueil, contact, à propos,
+  #  newsletter) envoient à cette adresse.
+  # ============================================================
+  destinataire: "info@pilotech.eu"
+
+  # FormSubmit : aucun compte requis.
+  # Au tout premier envoi, FormSubmit adresse un e-mail de confirmation
+  # à l'adresse ci-dessus : il faut cliquer sur le lien une seule fois.
+  endpoint_base: "https://formsubmit.co/"
+
 social: { facebook: "#", instagram: "#", linkedin: "#" }
 nav:
   - { title: "Accueil", url: "/" }

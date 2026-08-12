@@ -76,10 +76,8 @@ image: "/assets/img/toshiba/console-front.jpg"
     <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
       <h2 class="text-2xl font-bold mb-6">Votre demande</h2>
 
-      <form action="https://formsubmit.co/{{ site.company.email }}" method="POST" class="space-y-5">
-        <input type="hidden" name="_subject" value="Nouvelle demande de devis — site Pilotech">
-        <input type="hidden" name="_captcha" value="true">
-        <input type="text" name="_honey" style="display:none">
+      <form action="{{ site.forms.endpoint_base }}{{ site.forms.destinataire }}" method="POST" class="space-y-5">
+        {% include form-fields.html subject="Nouvelle demande de devis — page contact" %}
 
         <div class="grid sm:grid-cols-2 gap-5">
           <div>
@@ -124,6 +122,13 @@ image: "/assets/img/toshiba/console-front.jpg"
           <textarea id="message" name="message" rows="5" placeholder="Surface, nombre de pièces, type de logement, délais souhaités…"
             class="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary transition"></textarea>
         </div>
+
+
+        <label class="flex items-start gap-3 text-xs text-gray-600">
+          <input type="checkbox" name="consentement" value="oui" required class="mt-0.5 shrink-0">
+          <span>J'accepte que mes données soient utilisées pour traiter ma demande de devis.
+            Elles ne sont jamais transmises à des tiers. *</span>
+        </label>
 
         <button type="submit"
           class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3.5 px-8 rounded transition-colors">

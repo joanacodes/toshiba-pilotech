@@ -6,7 +6,7 @@ permalink: /sitemap.xml
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- assign pages = site.pages | where_exp: "p", "p.permalink" %}
 {%- for p in pages %}
-{%- unless p.permalink contains '.xml' or p.permalink contains '.txt' %}
+{%- unless p.permalink contains '.xml' or p.permalink contains '.txt' or p.robots contains 'noindex' %}
   <url>
     <loc>{{ p.permalink | absolute_url }}</loc>
     <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>

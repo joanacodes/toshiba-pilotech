@@ -1,0 +1,53 @@
+---
+layout: default
+title: "Demande envoyée — Pilotech"
+description: "Votre demande a bien été transmise à Pilotech. Nous revenons vers vous sous 24 heures ouvrées."
+permalink: /merci/
+breadcrumb: "Demande envoyée"
+image: "/assets/img/toshiba/console-front.jpg"
+robots: "noindex, follow"
+---
+
+<section class="py-20 md:py-28">
+  <div class="container mx-auto px-4 md:px-8">
+    <div class="max-w-2xl mx-auto text-center">
+
+      <div class="w-20 h-20 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-8">
+        <i class="fa-solid fa-check text-3xl"></i>
+      </div>
+
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Votre demande est bien partie</h1>
+
+      <p class="text-gray-600 text-lg mb-8">
+        Merci de votre confiance. Un technicien Pilotech vous recontacte
+        sous <strong>24 heures ouvrées</strong> pour préciser votre projet.
+      </p>
+
+      <div class="bg-gray-50 border border-gray-100 rounded-xl p-6 mb-10 text-left">
+        <h2 class="font-bold mb-4">Besoin d'une réponse plus rapide ?</h2>
+        <div class="space-y-3 text-sm">
+          <a href="{{ site.company.phone_href }}" class="flex items-center gap-3 text-gray-700 hover:text-primary transition">
+            <i class="fa-solid fa-phone text-primary w-5"></i>
+            <span>{{ site.company.phone }} — du lundi au vendredi, 9h à 18h</span>
+          </a>
+          <a href="mailto:{{ site.company.email }}" class="flex items-center gap-3 text-gray-700 hover:text-primary transition">
+            <i class="fa-solid fa-paper-plane text-primary w-5"></i>
+            <span>{{ site.company.email }}</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="{{ '/gammes-toshiba/' | relative_url }}"
+          class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded transition-colors no-underline">
+          Découvrir les gammes Toshiba
+        </a>
+        <a href="{{ '/' | relative_url }}"
+          class="bg-white border-2 border-dark text-dark font-medium py-3 px-8 rounded hover:bg-gray-50 transition-colors no-underline">
+          Retour à l'accueil
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>

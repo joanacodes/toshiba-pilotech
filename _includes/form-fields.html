@@ -1,0 +1,11 @@
+{%- comment -%}
+Champs techniques communs à tous les formulaires (FormSubmit).
+Paramètre : subject = objet de l'e-mail que tu recevras.
+L'adresse de destination se règle dans _config.yml -> forms.destinataire
+{%- endcomment -%}
+<input type="hidden" name="_subject" value="{{ include.subject }}">
+<input type="hidden" name="_next" value="{{ '/merci/' | absolute_url }}">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_autoresponse" value="Merci pour votre demande. L'équipe Pilotech vous recontacte sous 24 heures ouvrées. — Pilotech, installateur agréé Toshiba en Île-de-France.">
+<input type="text" name="_honey" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
