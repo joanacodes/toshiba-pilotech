@@ -113,10 +113,14 @@ img{height:auto}
 
 
 /* ---- Menu déroulant desktop ---- */
-.dropdown-panel{opacity:0;visibility:hidden;transform:translate(-50%,-8px);
-  transition:opacity .2s ease,transform .2s ease,visibility .2s;pointer-events:none}
+.dropdown-panel{opacity:0;visibility:hidden;transform:translateY(-10px);
+  transition:opacity .22s ease,transform .22s ease,visibility .22s;pointer-events:none}
 [data-dropdown]:hover .dropdown-panel,[data-dropdown]:focus-within .dropdown-panel,
-[data-dropdown].is-open .dropdown-panel{opacity:1;visibility:visible;transform:translate(-50%,0);pointer-events:auto}
+[data-dropdown].is-open .dropdown-panel{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+/* zone tampon : le curseur peut descendre du lien vers le panneau sans le fermer */
+[data-dropdown]{position:static}
+[data-dropdown]>a{position:relative}
+[data-dropdown]>a::after{content:"";position:absolute;left:0;right:0;top:100%;height:14px}
 [data-dropdown]:hover [data-dropdown-caret],[data-dropdown].is-open [data-dropdown-caret]{transform:rotate(180deg)}
 .w-\[640px\]{width:640px}
 .z-40{z-index:40}
@@ -154,3 +158,16 @@ img{height:auto}
 
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}
 .mt-0\.5{margin-top:.125rem}
+
+.grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.right-0{right:0}
+.left-0{left:0}
+.tracking-widest{letter-spacing:.1em}
+.leading-tight{line-height:1.25}
+.leading-snug{line-height:1.375}
+.items-end{align-items:flex-end}
+.border-t{border-top-width:1px}
+.hover\:border-primary:hover{border-color:#E31837}
+.group:hover .group-hover\:border-primary{border-color:#E31837}
+@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}
+.w-20{width:5rem}

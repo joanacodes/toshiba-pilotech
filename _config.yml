@@ -16,7 +16,7 @@ forms:
   #  Tous les formulaires du site (accueil, contact, à propos,
   #  newsletter) envoient à cette adresse.
   # ============================================================
-  destinataire: "myholybubble@gmail.com"
+  destinataire: "info@pilotech.eu"
 
   # FormSubmit : aucun compte requis.
   # Au tout premier envoi, FormSubmit adresse un e-mail de confirmation
@@ -30,66 +30,16 @@ nav:
   - { title: "Gammes Toshiba", url: "/gammes-toshiba/" }
   - { title: "Contact", url: "/contact/" }
 products:
-  - {
-      name: "Shorai Edge",
-      url: "/gammes/shorai-edge/",
-      desc: "Lignes droites, finition mate, A+++",
-    }
-  - {
-      name: "Shorai Curve",
-      url: "/gammes/shorai-curve/",
-      desc: "Design courbé, noir ou blanc mat",
-    }
-  - {
-      name: "Mural Yukai",
-      url: "/gammes/mural-yukai/",
-      desc: "Économique et ultra-silencieux",
-    }
-  - {
-      name: "Mural Haori",
-      url: "/gammes/mural-haori/",
-      desc: "Habillage textile, 15 coloris",
-    }
-  - {
-      name: "Mural Naka",
-      url: "/gammes/mural-naka/",
-      desc: "Le bon rapport performances/budget",
-    }
-  - {
-      name: "Mural Daiseikai 10",
-      url: "/gammes/daiseikai-10/",
-      desc: "Haut de gamme éco-conçu, bois certifié",
-    }
-  - {
-      name: "Super Heating",
-      url: "/gammes/super-heating/",
-      desc: "Chauffage performant jusqu'à -25°C",
-    }
-  - {
-      name: "Gainable Compact",
-      url: "/gammes/gainable-compact/",
-      desc: "Invisible en faux-plafond",
-    }
-  - {
-      name: "Gainable Standard",
-      url: "/gammes/gainable-standard/",
-      desc: "Grandes surfaces, zoning en option",
-    }
-  - {
-      name: "Console double-flux",
-      url: "/gammes/console-double-flux/",
-      desc: "Idéale en remplacement de radiateurs",
-    }
+  - { name: "Shorai Edge", url: "/gammes/shorai-edge/", desc: "Lignes droites, finition mate, A+++", img: "/assets/img/toshiba/shorai-edga-main-photo.jpg" }
+  - { name: "Shorai Curve", url: "/gammes/shorai-curve/", desc: "Design courbé, noir ou blanc mat", img: "/assets/img/toshiba/shorai-curve-noir-blanc.png" }
+  - { name: "Mural Yukai", url: "/gammes/mural-yukai/", desc: "Économique et ultra-silencieux", img: "/assets/img/toshiba/yukai-scaled.jpg" }
+  - { name: "Mural Haori", url: "/gammes/mural-haori/", desc: "Habillage textile, 15 coloris", img: "https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2F5ae0e6fe-eae7-4333-a418-e5f70a6a5ef9.png" }
+  - { name: "Mural Naka", url: "/gammes/mural-naka/", desc: "Le bon rapport performances/budget", img: "/assets/img/toshiba/naka-toshiba-03.jpg" }
+  - { name: "Mural Daiseikai 10", url: "/gammes/daiseikai-10/", desc: "Haut de gamme éco-conçu, bois certifié", img: "https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2Ff7d06d9f-4bd7-4ee5-b156-2c985616e217.png" }
+  - { name: "Super Heating", url: "/gammes/super-heating/", desc: "Chauffage performant jusqu'à -25°C", img: "https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2F310809a0-21c0-4a6e-9d57-e53bcae628cb.png" }
+  - { name: "Gainable Compact", url: "/gammes/gainable-compact/", desc: "Invisible en faux-plafond", img: "/assets/img/toshiba/gainable-2.jpg" }
+  - { name: "Gainable Standard", url: "/gammes/gainable-standard/", desc: "Grandes surfaces, zoning en option", img: "https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2F9ca5345f-fcbc-4961-81e8-c981bd399c73.png" }
+  - { name: "Console double-flux", url: "/gammes/console-double-flux/", desc: "Idéale en remplacement de radiateurs", img: "/assets/img/toshiba/console-front.jpg" }
 baseurl: "/toshiba-pilotech"
 url: "https://joanacodes.github.io"
-exclude:
-  [
-    README.md,
-    Gemfile,
-    Gemfile.lock,
-    package.json,
-    package-lock.json,
-    node_modules,
-    src,
-    tailwind.config.js,
-  ]
+exclude: [README.md, Gemfile, Gemfile.lock, package.json, package-lock.json, node_modules, src, tailwind.config.js]
