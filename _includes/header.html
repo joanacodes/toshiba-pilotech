@@ -25,7 +25,28 @@
           <i class="fa-solid fa-snowflake text-primary"></i><span class="text-gray-900">Pilotech</span></a>
       <nav class="hidden lg:flex items-center space-x-8 font-semibold text-gray-700 text-sm">
         {% for item in site.nav %}
-          {% if page.url == item.url %}
+          {% if item.url == '/gammes-toshiba/' %}
+          <div class="relative" data-dropdown>
+            <a href="{{ item.url | relative_url }}"
+               class="{% if page.url contains '/gammes' %}text-primary border-b-2 border-primary{% else %}hover:text-primary transition{% endif %} pb-1 flex items-center gap-1.5"
+               aria-haspopup="true" aria-expanded="false">
+              {{ item.title }}<i class="fa-solid fa-chevron-down text-[10px] transition-transform" data-dropdown-caret></i>
+            </a>
+            <div data-dropdown-panel class="dropdown-panel absolute left-1/2 -translate-x-1/2 top-full pt-4 w-[640px] z-40">
+              <div class="bg-white rounded-xl shadow-xl border border-gray-100 p-3 grid grid-cols-2 gap-1">
+                {% for p in site.products %}
+                <a href="{{ p.url | relative_url }}" class="flex flex-col px-4 py-3 rounded-lg hover:bg-gray-50 transition group no-underline">
+                  <span class="font-bold text-dark text-sm group-hover:text-primary transition">{{ p.name }}</span>
+                  <span class="text-xs text-gray-500 font-normal mt-0.5">{{ p.desc }}</span>
+                </a>
+                {% endfor %}
+                <a href="{{ item.url | relative_url }}" class="col-span-2 mt-2 text-center bg-gray-50 hover:bg-primary hover:text-white text-dark font-semibold text-sm py-3 rounded-lg transition no-underline">
+                  Voir toutes les gammes
+                </a>
+              </div>
+            </div>
+          </div>
+          {% elsif page.url == item.url %}
             <a href="{{ item.url | relative_url }}" class="text-primary border-b-2 border-primary pb-1">{{ item.title }}</a>
           {% else %}
             <a href="{{ item.url | relative_url }}" class="hover:text-primary transition pb-1">{{ item.title }}</a>

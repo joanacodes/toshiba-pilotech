@@ -15,24 +15,52 @@ image: "/assets/img/toshiba/yukai-schema-mono.jpg"
         <!-- Image Gallery -->
         <div>
           <div class="border border-gray-200 rounded-lg p-6 sm:p-8 mb-4 flex items-center justify-center relative bg-white h-[280px] sm:h-[400px]">
-            <img id="gallery-main" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2F176959d9-fab6-4395-b31c-8d905d815014.png" alt="Mural Yukai, unité murale blanche" class="max-w-full max-h-full object-contain">
+            <img id="gallery-main" src="{{ '/assets/img/toshiba/yukai-scaled.jpg' | relative_url }}" alt="Mural Yukai, unité murale blanche" class="max-w-full max-h-full object-contain">
+            <button type="button" data-gallery-prev aria-label="Image précédente"
+              class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 border border-gray-200 shadow flex items-center justify-center hover:bg-white hover:border-primary hover:text-primary transition">
+              <i class="fa-solid fa-chevron-left"></i></button>
+            <button type="button" data-gallery-next aria-label="Image suivante"
+              class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 border border-gray-200 shadow flex items-center justify-center hover:bg-white hover:border-primary hover:text-primary transition">
+              <i class="fa-solid fa-chevron-right"></i></button>
+            <span data-gallery-counter class="absolute bottom-3 right-4 text-xs text-gray-500 bg-white/90 px-2 py-1 rounded">1 / 9</span>
           </div>
-          <div class="grid grid-cols-4 sm:grid-cols-5 gap-3 sm:gap-4" data-gallery>
+          <div class="flex sm:grid sm:grid-cols-6 gap-3 sm:gap-4 overflow-x-auto snap-x pb-2" data-gallery>
             <button type="button" data-gallery-thumb="0"
-              class="border border-primary rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2F176959d9-fab6-4395-b31c-8d905d815014.png" alt="Mural Yukai, unité murale blanche" class="max-h-full max-w-full object-contain"></button>
+              class="border border-primary rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Mural Yukai, unité murale blanche">
+              <img src="{{ '/assets/img/toshiba/yukai-scaled.jpg' | relative_url }}" alt="Mural Yukai, unité murale blanche" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="1"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/yukai-schema-mono.jpg' | relative_url }}" alt="Yukai, installation monosplit" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Mural Yukai, vue rapprochée">
+              <img src="{{ '/assets/img/toshiba/yukai-zoom.png' | relative_url }}" alt="Mural Yukai, vue rapprochée" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="2"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/yukai-schema-multi.jpg' | relative_url }}" alt="Yukai, installation multisplit" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Mural Yukai, vue produit">
+              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2F176959d9-fab6-4395-b31c-8d905d815014.png" alt="Mural Yukai, vue produit" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="3"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/telecommande-yukai-accessoire.jpg' | relative_url }}" alt="Yukai, télécommande infrarouge" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Yukai, qualité de l'air intérieur">
+              <img src="{{ '/assets/img/toshiba/toshiba-yukai-qai-copyrights-toshiba.png' | relative_url }}" alt="Yukai, qualité de l'air intérieur" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="4"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/interface-wifi-gainable-standard.png' | relative_url }}" alt="Yukai, pilotage Wi-Fi Toshiba Home AC Control" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Yukai, télécommande fermée">
+              <img src="{{ '/assets/img/toshiba/controls-yukai-ras-b-e2kvg-rc-closed-slant-left-wh-tg01ne-scaled-1.jpg' | relative_url }}" alt="Yukai, télécommande fermée" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="5"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Yukai, télécommande ouverte">
+              <img src="{{ '/assets/img/toshiba/controls-yukai-ras-b-e2kvg-rc-open-focus-on-buttons-wh-tg01ne-scaled-1.jpg' | relative_url }}" alt="Yukai, télécommande ouverte" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="6"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Installation monosplit">
+              <img src="{{ '/assets/img/toshiba/yukai-schema-mono.jpg' | relative_url }}" alt="Installation monosplit" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="7"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Installation multisplit">
+              <img src="{{ '/assets/img/toshiba/yukai-schema-multi.jpg' | relative_url }}" alt="Installation multisplit" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="8"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Télécommande infrarouge">
+              <img src="{{ '/assets/img/toshiba/telecommande-yukai-accessoire.jpg' | relative_url }}" alt="Télécommande infrarouge" loading="lazy" class="max-h-full max-w-full object-contain"></button>
           </div>
         </div><!-- Product Info -->
         <div class="flex flex-col justify-center">

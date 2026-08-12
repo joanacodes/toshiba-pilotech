@@ -15,23 +15,35 @@ image: "/assets/img/toshiba/super-heating.jpg"
         <div>
           <div class="border border-gray-200 rounded-lg p-6 sm:p-8 mb-4 flex items-center justify-center relative bg-white h-[280px] sm:h-[400px]">
             <img id="gallery-main" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2F310809a0-21c0-4a6e-9d57-e53bcae628cb.png" alt="Super Heating, unité murale" class="max-w-full max-h-full object-contain">
+            <button type="button" data-gallery-prev aria-label="Image précédente"
+              class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 border border-gray-200 shadow flex items-center justify-center hover:bg-white hover:border-primary hover:text-primary transition">
+              <i class="fa-solid fa-chevron-left"></i></button>
+            <button type="button" data-gallery-next aria-label="Image suivante"
+              class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 border border-gray-200 shadow flex items-center justify-center hover:bg-white hover:border-primary hover:text-primary transition">
+              <i class="fa-solid fa-chevron-right"></i></button>
+            <span data-gallery-counter class="absolute bottom-3 right-4 text-xs text-gray-500 bg-white/90 px-2 py-1 rounded">1 / 5</span>
           </div>
-          <div class="grid grid-cols-4 sm:grid-cols-5 gap-3 sm:gap-4" data-gallery>
+          <div class="flex sm:grid sm:grid-cols-6 gap-3 sm:gap-4 overflow-x-auto snap-x pb-2" data-gallery>
             <button type="button" data-gallery-thumb="0"
-              class="border border-primary rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2F310809a0-21c0-4a6e-9d57-e53bcae628cb.png" alt="Super Heating, unité murale" class="max-h-full max-w-full object-contain"></button>
+              class="border border-primary rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Super Heating, unité murale">
+              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2F310809a0-21c0-4a6e-9d57-e53bcae628cb.png" alt="Super Heating, unité murale" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="1"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/super-heating.jpg' | relative_url }}" alt="Super Heating par grand froid" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Super Heating par grand froid">
+              <img src="{{ '/assets/img/toshiba/super-heating.jpg' | relative_url }}" alt="Super Heating par grand froid" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="2"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/ras-preshorai-ion-b-j2avrg-e-10-13-16-18-22k-odu-1.jpg' | relative_url }}" alt="Super Heating, unité extérieure" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Unité extérieure">
+              <img src="{{ '/assets/img/toshiba/ras-preshorai-ion-b-j2avrg-e-10-13-16-18-22k-odu-1.jpg' | relative_url }}" alt="Unité extérieure" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="3"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/ras-multi-u2avg-small.jpg' | relative_url }}" alt="Super Heating, unité extérieure multisplit" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Unité extérieure multisplit">
+              <img src="{{ '/assets/img/toshiba/ras-multi-u2avg-small.jpg' | relative_url }}" alt="Unité extérieure multisplit" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="4"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/dsk8-remote-22c-open-h-3.jpg' | relative_url }}" alt="Super Heating, télécommande" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Télécommande">
+              <img src="{{ '/assets/img/toshiba/dsk8-remote-22c-open-h-3.jpg' | relative_url }}" alt="Télécommande" loading="lazy" class="max-h-full max-w-full object-contain"></button>
           </div>
         </div><!-- Product Info -->
         <div class="flex flex-col justify-center">

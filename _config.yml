@@ -17,16 +17,16 @@ nav:
   - { title: "Gammes Toshiba", url: "/gammes-toshiba/" }
   - { title: "Contact", url: "/contact/" }
 products:
-  - { name: "Shorai Edge", url: "/gammes/shorai-edge/" }
-  - { name: "Shorai Curve", url: "/gammes/shorai-curve/" }
-  - { name: "Mural Yukai", url: "/gammes/mural-yukai/" }
-  - { name: "Mural Haori", url: "/gammes/mural-haori/" }
-  - { name: "Mural Naka", url: "/gammes/mural-naka/" }
-  - { name: "Mural Daiseikai 10", url: "/gammes/daiseikai-10/" }
-  - { name: "Super Heating", url: "/gammes/super-heating/" }
-  - { name: "Gainable Compact", url: "/gammes/gainable-compact/" }
-  - { name: "Gainable Standard", url: "/gammes/gainable-standard/" }
-  - { name: "Console double-flux", url: "/gammes/console-double-flux/" }
+  - { name: "Shorai Edge", url: "/gammes/shorai-edge/", desc: "Lignes droites, finition mate, A+++" }
+  - { name: "Shorai Curve", url: "/gammes/shorai-curve/", desc: "Design courbé, noir ou blanc mat" }
+  - { name: "Mural Yukai", url: "/gammes/mural-yukai/", desc: "Économique et ultra-silencieux" }
+  - { name: "Mural Haori", url: "/gammes/mural-haori/", desc: "Habillage textile, 15 coloris" }
+  - { name: "Mural Naka", url: "/gammes/mural-naka/", desc: "Le bon rapport performances/budget" }
+  - { name: "Mural Daiseikai 10", url: "/gammes/daiseikai-10/", desc: "Haut de gamme éco-conçu, bois certifié" }
+  - { name: "Super Heating", url: "/gammes/super-heating/", desc: "Chauffage performant jusqu'à -25°C" }
+  - { name: "Gainable Compact", url: "/gammes/gainable-compact/", desc: "Invisible en faux-plafond" }
+  - { name: "Gainable Standard", url: "/gammes/gainable-standard/", desc: "Grandes surfaces, zoning en option" }
+  - { name: "Console double-flux", url: "/gammes/console-double-flux/", desc: "Idéale en remplacement de radiateurs" }
 baseurl: "/toshiba-pilotech"
 url: "https://joanacodes.github.io"
 exclude: [README.md, Gemfile, Gemfile.lock, package.json, package-lock.json, node_modules, src, tailwind.config.js]

@@ -14,24 +14,40 @@ image: "/assets/img/toshiba/gainable-2.jpg"
         <!-- Image Gallery -->
         <div>
           <div class="border border-gray-200 rounded-lg p-6 sm:p-8 mb-4 flex items-center justify-center relative bg-white h-[280px] sm:h-[400px]">
-            <img id="gallery-main" src="{{ '/assets/img/toshiba/gainable-2.jpg' | relative_url }}" alt="Gainable compact, unité pour faux-plafond" class="max-w-full max-h-full object-contain">
+            <img id="gallery-main" src="{{ '/assets/img/toshiba/gainable-2.jpg' | relative_url }}" alt="Gainable compact pour faux-plafond" class="max-w-full max-h-full object-contain">
+            <button type="button" data-gallery-prev aria-label="Image précédente"
+              class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 border border-gray-200 shadow flex items-center justify-center hover:bg-white hover:border-primary hover:text-primary transition">
+              <i class="fa-solid fa-chevron-left"></i></button>
+            <button type="button" data-gallery-next aria-label="Image suivante"
+              class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 border border-gray-200 shadow flex items-center justify-center hover:bg-white hover:border-primary hover:text-primary transition">
+              <i class="fa-solid fa-chevron-right"></i></button>
+            <span data-gallery-counter class="absolute bottom-3 right-4 text-xs text-gray-500 bg-white/90 px-2 py-1 rounded">1 / 6</span>
           </div>
-          <div class="grid grid-cols-4 sm:grid-cols-5 gap-3 sm:gap-4" data-gallery>
+          <div class="flex sm:grid sm:grid-cols-6 gap-3 sm:gap-4 overflow-x-auto snap-x pb-2" data-gallery>
             <button type="button" data-gallery-thumb="0"
-              class="border border-primary rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/gainable-2.jpg' | relative_url }}" alt="Gainable compact, unité pour faux-plafond" class="max-h-full max-w-full object-contain"></button>
+              class="border border-primary rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Gainable compact pour faux-plafond">
+              <img src="{{ '/assets/img/toshiba/gainable-2.jpg' | relative_url }}" alt="Gainable compact pour faux-plafond" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="1"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/gainable-compact-multisplit-schema.jpg' | relative_url }}" alt="Gainable compact, installation multisplit" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Gainable compact, autre vue">
+              <img src="{{ '/assets/img/toshiba/compact-multisplit-other-photo-for-slideshow.jpg' | relative_url }}" alt="Gainable compact, autre vue" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="2"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/commande-filaire-programmable-gainable-compact.jpg' | relative_url }}" alt="Gainable compact, commande filaire programmable" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Installation multisplit">
+              <img src="{{ '/assets/img/toshiba/gainable-compact-multisplit-schema.jpg' | relative_url }}" alt="Installation multisplit" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="3"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/telecommande-gainable-compact-multisplit.jpg' | relative_url }}" alt="Gainable compact, télécommande" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Commande filaire programmable">
+              <img src="{{ '/assets/img/toshiba/commande-filaire-programmable-gainable-compact.jpg' | relative_url }}" alt="Commande filaire programmable" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="4"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/interface-wifi-gainable-standard.png' | relative_url }}" alt="Gainable compact, pilotage Wi-Fi" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Télécommande">
+              <img src="{{ '/assets/img/toshiba/telecommande-gainable-compact-multisplit.jpg' | relative_url }}" alt="Télécommande" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="5"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Pilotage Wi-Fi">
+              <img src="{{ '/assets/img/toshiba/interface-wifi-gainable-standard.png' | relative_url }}" alt="Pilotage Wi-Fi" loading="lazy" class="max-h-full max-w-full object-contain"></button>
           </div>
         </div><!-- Product Info -->
         <div class="flex flex-col justify-center">

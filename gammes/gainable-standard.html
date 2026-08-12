@@ -15,32 +15,47 @@ image: "/assets/img/toshiba/gainable-standard-photo-2-slideshow.jpg"
         <div>
           <div class="border border-gray-200 rounded-lg p-6 sm:p-8 mb-4 flex items-center justify-center relative bg-white h-[280px] sm:h-[400px]">
             <img id="gallery-main" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2F9ca5345f-fcbc-4961-81e8-c981bd399c73.png" alt="Gainable standard, unité intérieure" class="max-w-full max-h-full object-contain">
+            <button type="button" data-gallery-prev aria-label="Image précédente"
+              class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 border border-gray-200 shadow flex items-center justify-center hover:bg-white hover:border-primary hover:text-primary transition">
+              <i class="fa-solid fa-chevron-left"></i></button>
+            <button type="button" data-gallery-next aria-label="Image suivante"
+              class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 border border-gray-200 shadow flex items-center justify-center hover:bg-white hover:border-primary hover:text-primary transition">
+              <i class="fa-solid fa-chevron-right"></i></button>
+            <span data-gallery-counter class="absolute bottom-3 right-4 text-xs text-gray-500 bg-white/90 px-2 py-1 rounded">1 / 8</span>
           </div>
-          <div class="grid grid-cols-4 sm:grid-cols-5 gap-3 sm:gap-4" data-gallery>
+          <div class="flex sm:grid sm:grid-cols-6 gap-3 sm:gap-4 overflow-x-auto snap-x pb-2" data-gallery>
             <button type="button" data-gallery-thumb="0"
-              class="border border-primary rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2F9ca5345f-fcbc-4961-81e8-c981bd399c73.png" alt="Gainable standard, unité intérieure" class="max-h-full max-w-full object-contain"></button>
+              class="border border-primary rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Gainable standard, unité intérieure">
+              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2F9ca5345f-fcbc-4961-81e8-c981bd399c73.png" alt="Gainable standard, unité intérieure" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="1"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/gainable-2.jpg' | relative_url }}" alt="Gainable standard, vue de l'unité" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Vue de l'unité">
+              <img src="{{ '/assets/img/toshiba/gainable-2.jpg' | relative_url }}" alt="Vue de l'unité" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="2"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/gainable-standard-photo-2-slideshow.jpg' | relative_url }}" alt="Gainable standard en situation" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Gainable standard en situation">
+              <img src="{{ '/assets/img/toshiba/gainable-standard-photo-2-slideshow.jpg' | relative_url }}" alt="Gainable standard en situation" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="3"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/schema-gainable-standard-avec-zoning.png' | relative_url }}" alt="Gainable standard avec zoning" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Solution avec zoning">
+              <img src="{{ '/assets/img/toshiba/schema-gainable-standard-avec-zoning.png' | relative_url }}" alt="Solution avec zoning" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="4"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/gainable-standard-sans-zoning.png' | relative_url }}" alt="Gainable standard sans zoning" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Solution sans zoning">
+              <img src="{{ '/assets/img/toshiba/gainable-standard-sans-zoning.png' | relative_url }}" alt="Solution sans zoning" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="5"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/accessoire-1-gainable-standard.jpg' | relative_url }}" alt="Commande filaire programmable" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Commande filaire programmable">
+              <img src="{{ '/assets/img/toshiba/accessoire-1-gainable-standard.jpg' | relative_url }}" alt="Commande filaire programmable" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="6"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/accessoire-2-gainable-standard.jpg' | relative_url }}" alt="Commande filaire simplifiée" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Commande filaire simplifiée">
+              <img src="{{ '/assets/img/toshiba/accessoire-2-gainable-standard.jpg' | relative_url }}" alt="Commande filaire simplifiée" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="7"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/accessoire-3-gainable-standard.jpg' | relative_url }}" alt="Commande sans fil optionnelle" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Commande sans fil optionnelle">
+              <img src="{{ '/assets/img/toshiba/accessoire-3-gainable-standard.jpg' | relative_url }}" alt="Commande sans fil optionnelle" loading="lazy" class="max-h-full max-w-full object-contain"></button>
           </div>
         </div><!-- Product Info -->
         <div class="flex flex-col justify-center">

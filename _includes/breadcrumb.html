@@ -1,0 +1,26 @@
+{%- if page.url != '/' -%}
+<nav aria-label="Fil d'Ariane" class="border-b border-gray-100 bg-gray-50">
+  <div class="container mx-auto px-4 md:px-8 py-3">
+    <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm text-gray-500">
+      <li>
+        <a href="{{ '/' | relative_url }}" class="hover:text-primary transition inline-flex items-center gap-1.5">
+          <i class="fa-solid fa-house text-[11px]"></i>Accueil
+        </a>
+      </li>
+      {%- if page.product_name %}
+      <li aria-hidden="true"><i class="fa-solid fa-chevron-right text-[9px] text-gray-300"></i></li>
+      <li><a href="{{ '/gammes-toshiba/' | relative_url }}" class="hover:text-primary transition">Gammes Toshiba</a></li>
+      <li aria-hidden="true"><i class="fa-solid fa-chevron-right text-[9px] text-gray-300"></i></li>
+      <li><span class="text-dark font-semibold" aria-current="page">{{ page.product_name }}</span></li>
+      {%- else %}
+      <li aria-hidden="true"><i class="fa-solid fa-chevron-right text-[9px] text-gray-300"></i></li>
+      <li>
+        <span class="text-dark font-semibold" aria-current="page">
+          {{ page.breadcrumb | default: page.title | split: ' —' | first | split: ' |' | first }}
+        </span>
+      </li>
+      {%- endif %}
+    </ol>
+  </div>
+</nav>
+{%- endif -%}

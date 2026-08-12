@@ -16,41 +16,59 @@ image: "/assets/img/toshiba/shorai-curve-noir-blanc.png"
         <div>
           <div class="border border-gray-200 rounded-lg p-6 sm:p-8 mb-4 flex items-center justify-center relative bg-white h-[280px] sm:h-[400px]">
             <img id="gallery-main" src="{{ '/assets/img/toshiba/shorai-curve-noir-blanc.png' | relative_url }}" alt="Shorai Curve, coloris noir et blanc" class="max-w-full max-h-full object-contain">
+            <button type="button" data-gallery-prev aria-label="Image précédente"
+              class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 border border-gray-200 shadow flex items-center justify-center hover:bg-white hover:border-primary hover:text-primary transition">
+              <i class="fa-solid fa-chevron-left"></i></button>
+            <button type="button" data-gallery-next aria-label="Image suivante"
+              class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 border border-gray-200 shadow flex items-center justify-center hover:bg-white hover:border-primary hover:text-primary transition">
+              <i class="fa-solid fa-chevron-right"></i></button>
+            <span data-gallery-counter class="absolute bottom-3 right-4 text-xs text-gray-500 bg-white/90 px-2 py-1 rounded">1 / 11</span>
           </div>
-          <div class="grid grid-cols-4 sm:grid-cols-5 gap-3 sm:gap-4" data-gallery>
+          <div class="flex sm:grid sm:grid-cols-6 gap-3 sm:gap-4 overflow-x-auto snap-x pb-2" data-gallery>
             <button type="button" data-gallery-thumb="0"
-              class="border border-primary rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/shorai-curve-noir-blanc.png' | relative_url }}" alt="Shorai Curve, coloris noir et blanc" class="max-h-full max-w-full object-contain"></button>
+              class="border border-primary rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Shorai Curve, coloris noir et blanc">
+              <img src="{{ '/assets/img/toshiba/shorai-curve-noir-blanc.png' | relative_url }}" alt="Shorai Curve, coloris noir et blanc" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="1"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/shorai-curve-black-front-scaled.png' | relative_url }}" alt="Shorai Curve noir, vue de face" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Shorai Curve noir, vue de face">
+              <img src="{{ '/assets/img/toshiba/shorai-curve-black-front-scaled.png' | relative_url }}" alt="Shorai Curve noir, vue de face" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="2"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/shorai-curve-black-slant-right-3.png' | relative_url }}" alt="Shorai Curve noir, vue trois quarts" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Shorai Curve noir, trois quarts">
+              <img src="{{ '/assets/img/toshiba/shorai-curve-black-slant-right-3.png' | relative_url }}" alt="Shorai Curve noir, trois quarts" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="3"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/shorai-curve-black-side-view-scaled-profil.png' | relative_url }}" alt="Shorai Curve noir, vue de profil" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Shorai Curve noir, profil">
+              <img src="{{ '/assets/img/toshiba/shorai-curve-black-side-view-scaled-profil.png' | relative_url }}" alt="Shorai Curve noir, profil" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="4"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/shorai-curve-white-slant-left.png' | relative_url }}" alt="Shorai Curve blanc, trois quarts gauche" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Shorai Curve blanc, trois quarts gauche">
+              <img src="{{ '/assets/img/toshiba/shorai-curve-white-slant-left.png' | relative_url }}" alt="Shorai Curve blanc, trois quarts gauche" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="5"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/shorai-curve-white-slant-right-2.png' | relative_url }}" alt="Shorai Curve blanc, trois quarts droite" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Shorai Curve blanc, trois quarts droite">
+              <img src="{{ '/assets/img/toshiba/shorai-curve-white-slant-right-2.png' | relative_url }}" alt="Shorai Curve blanc, trois quarts droite" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="6"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/shorai-curve-white-side.png' | relative_url }}" alt="Shorai Curve blanc, vue de profil" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Shorai Curve blanc, profil">
+              <img src="{{ '/assets/img/toshiba/shorai-curve-white-side.png' | relative_url }}" alt="Shorai Curve blanc, profil" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="7"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/shorai-curve-noir-blanc-2.png' | relative_url }}" alt="Shorai Curve, les deux coloris" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Shorai Curve, les deux coloris">
+              <img src="{{ '/assets/img/toshiba/shorai-curve-noir-blanc-2.png' | relative_url }}" alt="Shorai Curve, les deux coloris" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="8"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/shorai-curve-schema-monosplit.png' | relative_url }}" alt="Shorai Curve, installation monosplit" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Installation monosplit">
+              <img src="{{ '/assets/img/toshiba/shorai-curve-schema-monosplit.png' | relative_url }}" alt="Installation monosplit" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="9"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/shorai-curve-schema-monosplit-ue-ui.png' | relative_url }}" alt="Shorai Curve, unités intérieure et extérieure" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Unités intérieure et extérieure">
+              <img src="{{ '/assets/img/toshiba/shorai-curve-schema-monosplit-ue-ui.png' | relative_url }}" alt="Unités intérieure et extérieure" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="10"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/telecommande-shorai-curve.png' | relative_url }}" alt="Shorai Curve, télécommande infrarouge" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Télécommande infrarouge">
+              <img src="{{ '/assets/img/toshiba/telecommande-shorai-curve.png' | relative_url }}" alt="Télécommande infrarouge" loading="lazy" class="max-h-full max-w-full object-contain"></button>
           </div>
         </div><!-- Product Info -->
         <div class="flex flex-col justify-center">

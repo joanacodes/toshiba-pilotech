@@ -16,26 +16,63 @@ image: "/assets/img/toshiba/daiseikai-10-toshiba-living-room.jpg"
         <div>
           <div class="border border-gray-200 rounded-lg p-6 sm:p-8 mb-4 flex items-center justify-center relative bg-white h-[280px] sm:h-[400px]">
             <img id="gallery-main" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2Ff7d06d9f-4bd7-4ee5-b156-2c985616e217.png" alt="Daiseikai 10, finition bois" class="max-w-full max-h-full object-contain">
+            <button type="button" data-gallery-prev aria-label="Image précédente"
+              class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 border border-gray-200 shadow flex items-center justify-center hover:bg-white hover:border-primary hover:text-primary transition">
+              <i class="fa-solid fa-chevron-left"></i></button>
+            <button type="button" data-gallery-next aria-label="Image suivante"
+              class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 border border-gray-200 shadow flex items-center justify-center hover:bg-white hover:border-primary hover:text-primary transition">
+              <i class="fa-solid fa-chevron-right"></i></button>
+            <span data-gallery-counter class="absolute bottom-3 right-4 text-xs text-gray-500 bg-white/90 px-2 py-1 rounded">1 / 12</span>
           </div>
-          <div class="grid grid-cols-4 sm:grid-cols-5 gap-3 sm:gap-4" data-gallery>
+          <div class="flex sm:grid sm:grid-cols-6 gap-3 sm:gap-4 overflow-x-auto snap-x pb-2" data-gallery>
             <button type="button" data-gallery-thumb="0"
-              class="border border-primary rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2Ff7d06d9f-4bd7-4ee5-b156-2c985616e217.png" alt="Daiseikai 10, finition bois" class="max-h-full max-w-full object-contain"></button>
+              class="border border-primary rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Daiseikai 10, finition bois">
+              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2Ff7d06d9f-4bd7-4ee5-b156-2c985616e217.png" alt="Daiseikai 10, finition bois" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="1"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/daiseikai-10-toshiba-living-room.jpg' | relative_url }}" alt="Daiseikai 10 installé dans un salon" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Daiseikai 10 dans un salon">
+              <img src="{{ '/assets/img/toshiba/daiseikai-10-toshiba-living-room.jpg' | relative_url }}" alt="Daiseikai 10 dans un salon" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="2"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/daiseikai-10-toshiba-small-living-room-example.jpg' | relative_url }}" alt="Daiseikai 10 en petite pièce" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Daiseikai 10 en séjour">
+              <img src="{{ '/assets/img/toshiba/daiseikai-10-toshiba-living-room-1.jpg' | relative_url }}" alt="Daiseikai 10 en séjour" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="3"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/daiseikai-10-mono.jpg' | relative_url }}" alt="Daiseikai 10, installation monosplit" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Daiseikai 10, autre salon">
+              <img src="{{ '/assets/img/toshiba/daiseikai-10-toshiba-livingroom-2.jpg' | relative_url }}" alt="Daiseikai 10, autre salon" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="4"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/daiseikai-multi.jpg' | relative_url }}" alt="Daiseikai 10, installation multisplit" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Daiseikai 10 en chambre">
+              <img src="{{ '/assets/img/toshiba/daiseikai-10-toshiba-44-bedroom.jpg' | relative_url }}" alt="Daiseikai 10 en chambre" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="5"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/daiseikai-10-telecommandes.jpg' | relative_url }}" alt="Daiseikai 10, télécommandes" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Daiseikai 10, vue de détail">
+              <img src="{{ '/assets/img/toshiba/daiseikai-10-toshiba-48.jpg' | relative_url }}" alt="Daiseikai 10, vue de détail" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="6"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Daiseikai 10, finition bois de frêne">
+              <img src="{{ '/assets/img/toshiba/daiseikai-10-toshiba-49.jpg' | relative_url }}" alt="Daiseikai 10, finition bois de frêne" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="7"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Daiseikai 10, vue rapprochée">
+              <img src="{{ '/assets/img/toshiba/daiseikai-10-toshiba-50.jpg' | relative_url }}" alt="Daiseikai 10, vue rapprochée" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="8"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Daiseikai 10 en petite pièce">
+              <img src="{{ '/assets/img/toshiba/daiseikai-10-toshiba-small-living-room-example.jpg' | relative_url }}" alt="Daiseikai 10 en petite pièce" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="9"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Installation monosplit">
+              <img src="{{ '/assets/img/toshiba/daiseikai-10-mono.jpg' | relative_url }}" alt="Installation monosplit" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="10"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Installation multisplit">
+              <img src="{{ '/assets/img/toshiba/daiseikai-multi.jpg' | relative_url }}" alt="Installation multisplit" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="11"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Télécommandes">
+              <img src="{{ '/assets/img/toshiba/daiseikai-10-telecommandes.jpg' | relative_url }}" alt="Télécommandes" loading="lazy" class="max-h-full max-w-full object-contain"></button>
           </div>
         </div><!-- Product Info -->
         <div class="flex flex-col justify-center">

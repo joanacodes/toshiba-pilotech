@@ -16,23 +16,107 @@ image: "/assets/img/toshiba/haori-textiles-coloris.jpg"
         <div>
           <div class="border border-gray-200 rounded-lg p-6 sm:p-8 mb-4 flex items-center justify-center relative bg-white h-[280px] sm:h-[400px]">
             <img id="gallery-main" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2F5ae0e6fe-eae7-4333-a418-e5f70a6a5ef9.png" alt="Mural Haori, habillage textile" class="max-w-full max-h-full object-contain">
+            <button type="button" data-gallery-prev aria-label="Image précédente"
+              class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 border border-gray-200 shadow flex items-center justify-center hover:bg-white hover:border-primary hover:text-primary transition">
+              <i class="fa-solid fa-chevron-left"></i></button>
+            <button type="button" data-gallery-next aria-label="Image suivante"
+              class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 border border-gray-200 shadow flex items-center justify-center hover:bg-white hover:border-primary hover:text-primary transition">
+              <i class="fa-solid fa-chevron-right"></i></button>
+            <span data-gallery-counter class="absolute bottom-3 right-4 text-xs text-gray-500 bg-white/90 px-2 py-1 rounded">1 / 23</span>
           </div>
-          <div class="grid grid-cols-4 sm:grid-cols-5 gap-3 sm:gap-4" data-gallery>
+          <div class="flex sm:grid sm:grid-cols-6 gap-3 sm:gap-4 overflow-x-auto snap-x pb-2" data-gallery>
             <button type="button" data-gallery-thumb="0"
-              class="border border-primary rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2F5ae0e6fe-eae7-4333-a418-e5f70a6a5ef9.png" alt="Mural Haori, habillage textile" class="max-h-full max-w-full object-contain"></button>
+              class="border border-primary rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Mural Haori, habillage textile">
+              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2F5ae0e6fe-eae7-4333-a418-e5f70a6a5ef9.png" alt="Mural Haori, habillage textile" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="1"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/haori-textiles-coloris.jpg' | relative_url }}" alt="Haori, nuancier des habillages textiles" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Haori habillage blanc">
+              <img src="{{ '/assets/img/toshiba/haori-white-1.png' | relative_url }}" alt="Haori habillage blanc" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="2"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/haori-schema-mono.jpg' | relative_url }}" alt="Haori, installation monosplit" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Haori habillage gris">
+              <img src="{{ '/assets/img/toshiba/haori-grey.png' | relative_url }}" alt="Haori habillage gris" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="3"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/haori-schema-multi.jpg' | relative_url }}" alt="Haori, installation multisplit" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Haori habillage bleu">
+              <img src="{{ '/assets/img/toshiba/haori-blue.png' | relative_url }}" alt="Haori habillage bleu" loading="lazy" class="max-h-full max-w-full object-contain"></button>
             <button type="button" data-gallery-thumb="4"
-              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400">
-              <img src="{{ '/assets/img/toshiba/telecommande-haori.jpg' | relative_url }}" alt="Haori, télécommande infrarouge" class="max-h-full max-w-full object-contain"></button>
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Haori habillage cuivre">
+              <img src="{{ '/assets/img/toshiba/haori-copper.png' | relative_url }}" alt="Haori habillage cuivre" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="5"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Haori habillage émeraude">
+              <img src="{{ '/assets/img/toshiba/haor-emerald.png' | relative_url }}" alt="Haori habillage émeraude" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="6"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Haori habillage mauve">
+              <img src="{{ '/assets/img/toshiba/haori-mauve.png' | relative_url }}" alt="Haori habillage mauve" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="7"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Haori habillage argile">
+              <img src="{{ '/assets/img/toshiba/haori-argile.png' | relative_url }}" alt="Haori habillage argile" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="8"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Haori habillage moutarde">
+              <img src="{{ '/assets/img/toshiba/haori-moutarde.png' | relative_url }}" alt="Haori habillage moutarde" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="9"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Haori habillage rose poudré">
+              <img src="{{ '/assets/img/toshiba/haori-rose-poudre.png' | relative_url }}" alt="Haori habillage rose poudré" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="10"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Haori habillage rouge cardinal">
+              <img src="{{ '/assets/img/toshiba/haori-rouge-cardinal.png' | relative_url }}" alt="Haori habillage rouge cardinal" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="11"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Haori habillage vert d'eau">
+              <img src="{{ '/assets/img/toshiba/haori-vert-deau.png' | relative_url }}" alt="Haori habillage vert d'eau" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="12"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Haori habillage Ondine bleu">
+              <img src="{{ '/assets/img/toshiba/haori-ondine-bleue.png' | relative_url }}" alt="Haori habillage Ondine bleu" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="13"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Haori habillage Ondine noir">
+              <img src="{{ '/assets/img/toshiba/haori-ondine-noire.png' | relative_url }}" alt="Haori habillage Ondine noir" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="14"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Haori en chambre, textile gris bleuté">
+              <img src="{{ '/assets/img/toshiba/ras-haori-in-situ-pic-fabric-bluishgray-scaled-bedroom-2.jpg' | relative_url }}" alt="Haori en chambre, textile gris bleuté" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="15"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Haori en salle à manger, textile gris clair">
+              <img src="{{ '/assets/img/toshiba/ras-haori-in-situ-pic-fabric-lightgray-scaled-salla-u00e0-manger.jpg' | relative_url }}" alt="Haori en salle à manger, textile gris clair" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="16"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Haori en chambre, textile jaune">
+              <img src="{{ '/assets/img/toshiba/ras-haori-in-situ-pic-fabric-yellow-scaled-bedroom.jpg' | relative_url }}" alt="Haori en chambre, textile jaune" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="17"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Haori en salon, ambiance street art">
+              <img src="{{ '/assets/img/toshiba/mural-gris-street-art-haori-living-room.png' | relative_url }}" alt="Haori en salon, ambiance street art" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="18"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Haori, encart produit">
+              <img src="{{ '/assets/img/toshiba/encart-produits-haori2.jpg' | relative_url }}" alt="Haori, encart produit" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="19"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Nuancier des habillages textiles">
+              <img src="{{ '/assets/img/toshiba/haori-textiles-coloris.jpg' | relative_url }}" alt="Nuancier des habillages textiles" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="20"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Installation monosplit">
+              <img src="{{ '/assets/img/toshiba/haori-schema-mono.jpg' | relative_url }}" alt="Installation monosplit" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="21"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Installation multisplit">
+              <img src="{{ '/assets/img/toshiba/haori-schema-multi.jpg' | relative_url }}" alt="Installation multisplit" loading="lazy" class="max-h-full max-w-full object-contain"></button>
+            <button type="button" data-gallery-thumb="22"
+              class="border border-gray-200 opacity-60 hover:opacity-100 rounded p-2 h-20 sm:h-24 flex items-center justify-center transition-all hover:border-gray-400 shrink-0 w-24 sm:w-auto snap-start"
+              aria-label="Voir : Télécommande Haori">
+              <img src="{{ '/assets/img/toshiba/telecommande-haori.png' | relative_url }}" alt="Télécommande Haori" loading="lazy" class="max-h-full max-w-full object-contain"></button>
           </div>
         </div><!-- Product Info -->
         <div class="flex flex-col justify-center">
