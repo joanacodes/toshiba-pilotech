@@ -64,5 +64,5 @@ products:
   - { name: "Gainable Standard", url: "/gammes/gainable-standard/", desc: "Grandes surfaces, zoning en option", img: "https://storage.googleapis.com/uxpilot-auth.appspot.com/AwYCQYRWfMc2W3Qky94kDOsPiu42%2F9ca5345f-fcbc-4961-81e8-c981bd399c73.png" }
   - { name: "Console double-flux", url: "/gammes/console-double-flux/", desc: "Idéale en remplacement de radiateurs", img: "/assets/img/toshiba/console-front.jpg" }
 baseurl: ""
-url: "hhttps://pilotech-toshiba.com"
+url: "https://pilotech-toshiba.com"
 exclude: [README.md, Gemfile, Gemfile.lock, package.json, package-lock.json, node_modules, src, tailwind.config.js]
