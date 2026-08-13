@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Installateur agréé Toshiba en Île-de-France | Pilotech"
-description: "Pilotech, installateur agréé Toshiba à Paris et en région parisienne : installation, entretien et dépannage de climatisation. 5/5 sur 79 avis Google."
+description: "Pilotech, installateur agréé Toshiba à Paris et en région parisienne : installation, entretien et dépannage de climatisation. 5/5 sur {{ site.company.reviews_count }}."
 permalink: /a-propos/
 breadcrumb: "À propos"
 image: "/assets/img/toshiba/gainable-standard-photo-2-slideshow.jpg"
@@ -207,15 +207,15 @@ image: "/assets/img/toshiba/gainable-standard-photo-2-slideshow.jpg"
         <div class="reviews" data-reviews data-reviews-interval="3000">
           <div class="reviews-track flex" data-reviews-track>
             {% for r in site.reviews %}
-            <div class="reviews-slide w-full md:w-1/2 shrink-0 px-4 flex">
-              <div class="bg-white p-8 md:p-10 rounded-lg border border-gray-100 shadow-sm relative h-full flex flex-col">
+            <div class="reviews-slide w-full md:w-1/2 shrink-0 px-3 flex">
+              <div class="bg-white p-6 md:p-7 rounded-lg border border-gray-100 shadow-sm relative h-full flex flex-col">
                 <div class="absolute bottom-[-15px] left-10 w-8 h-8 bg-white border-b border-r border-gray-100 transform rotate-45"></div>
-                <p class="text-gray-600 mb-6 text-lg leading-relaxed flex-grow">« {{ r.text }} »</p>
-                <div class="flex text-primary text-sm mb-6" aria-label="5 étoiles sur 5">
+                <p class="text-gray-600 mb-4 text-base leading-relaxed flex-grow">« {{ r.text }} »</p>
+                <div class="flex text-primary text-sm mb-4" aria-label="5 étoiles sur 5">
                   <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
-                <div class="flex items-center mt-2">
-                  <span class="w-12 h-12 rounded-full mr-4 bg-primary/10 text-primary font-bold flex items-center justify-center shrink-0" aria-hidden="true">{{ r.name | slice: 0 }}</span>
+                <div class="flex items-center pt-4 border-t border-gray-100">
+                  <span class="w-10 h-10 rounded-full mr-3 bg-primary/10 text-primary font-bold flex items-center justify-center shrink-0" aria-hidden="true">{{ r.name | slice: 0 }}</span>
                   <div>
                     <h4 class="font-bold text-dark">{{ r.name }}</h4>
                     <p class="text-gray-500 text-sm">{{ r.role }}</p>

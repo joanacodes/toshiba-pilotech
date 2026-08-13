@@ -269,7 +269,7 @@ details summary::-webkit-details-marker{display:none}
 .reviews-slide>div{width:100%}
 
 /* la flèche décorative sous les cartes ne doit pas être rognée */
-.reviews{overflow:hidden;padding:0 1rem 2rem;margin:0 -1rem}
+.reviews{overflow:hidden;padding:0 .75rem 1.75rem;margin:0 -.75rem}
 .reviews-dot{width:12px;height:12px;border-radius:9999px;background:#d1d5db;transition:background .3s ease}
 .reviews-dot[aria-current="true"]{background:#1A1A1A}
 .bottom-\[-15px\]{bottom:-15px}
@@ -287,3 +287,22 @@ details summary::-webkit-details-marker{display:none}
 /* Si le JS ne s'exécute pas, le carrousel reste lisible (pas d'empilement infini) */
 .reviews:not([data-reviews-ready]) .reviews-track{flex-wrap:nowrap}
 .reviews:not([data-reviews-ready]) .reviews-slide:nth-child(n+3){display:none}
+
+/* barre de défilement masquée pour les onglets produits */
+.no-scrollbar{scrollbar-width:none;-ms-overflow-style:none}
+.no-scrollbar::-webkit-scrollbar{display:none}
+.min-w-max{min-width:max-content}
+.gap-y-8{row-gap:2rem}
+.gap-0\.5{gap:.125rem}
+.px-3{padding-left:.75rem;padding-right:.75rem}
+.md\:p-7{padding:1.75rem}
+.pt-12{padding-top:3rem}
+.pb-4{padding-bottom:1rem}
+.justify-start{justify-content:flex-start}
+.px-1{padding-left:.25rem;padding-right:.25rem}
+.mr-3{margin-right:.75rem}
+.h-10{height:2.5rem}
+.w-10{width:2.5rem}
+.gap-6{gap:1.5rem}
+@media (min-width:768px){.md\:p-7{padding:1.75rem}}
+@media (min-width:1024px){.lg\:flex{display:flex}.lg\:flex-wrap{flex-wrap:wrap}.lg\:justify-center{justify-content:center}.lg\:px-10{padding-left:2.5rem;padding-right:2.5rem}.lg\:gap-8{gap:2rem}}
