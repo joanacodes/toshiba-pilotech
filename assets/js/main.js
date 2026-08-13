@@ -222,8 +222,93 @@
     });
   }
 
+
+  /* Carrousel d'avis : défilement auto toutes les 3 s + flèches */
+  function initReviews() {
+    document.querySelectorAll('[data-reviews]').forEach(function (root) {
+      var track = root.querySelector('[data-reviews-track]');
+      if (!track) return;
+      var slides = Array.prototype.slice.call(track.children);
+      if (!slides.length) return;
+
+      var section = root.closest('section') || document;
+      var prev = section.querySelector('[data-reviews-prev]');
+      var next = section.querySelector('[data-reviews-next]');
+      var dotsBox = root.querySelector('[data-reviews-dots]');
+      var delay = parseInt(root.getAttribute('data-reviews-interval'), 10) || 3000;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var index = 0, timer = null;
+
+      function perView() {
+        return Math.max(1, Math.round(root.clientWidth / slides[0].getBoundingClientRect().width));
+      }
+      function maxIndex() { return Math.max(0, slides.length - perView()); }
+
+      function render() {
+        var w = slides[0].getBoundingClientRect().width;
+        track.style.transform = 'translateX(' + (-index * w) + 'px)';
+        if (dotsBox) {
+          Array.prototype.slice.call(dotsBox.children).forEach(function (d, i) {
+            d.setAttribute('aria-current', i === index ? 'true' : 'false');
+          });
+        }
+      }
+      function go(i) {
+        var m = maxIndex();
+        index = i > m ? 0 : (i < 0 ? m : i);
+        render();
+      }
+      function buildDots() {
+        if (!dotsBox) return;
+        dotsBox.innerHTML = '';
+        for (var i = 0; i <= maxIndex(); i++) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'reviews-dot';
+          b.setAttribute('aria-label', 'Avis ' + (i + 1));
+          (function (k) { b.addEventListener('click', function () { go(k); restart(); }); })(i);
+          dotsBox.appendChild(b);
+        }
+      }
+      function start() {
+        if (reduce || timer) return;
+        timer = window.setInterval(function () { go(index + 1); }, delay);
+      }
+      function stop() { window.clearInterval(timer); timer = null; }
+      function restart() { stop(); start(); }
+
+      if (prev) prev.addEventListener('click', function () { go(index - 1); restart(); });
+      if (next) next.addEventListener('click', function () { go(index + 1); restart(); });
+
+      /* la lecture s'arrête au survol et quand l'onglet est en arrière-plan */
+      root.addEventListener('mouseenter', stop);
+      root.addEventListener('mouseleave', start);
+      root.addEventListener('focusin', stop);
+      root.addEventListener('focusout', start);
+      document.addEventListener('visibilitychange', function () {
+        document.hidden ? stop() : start();
+      });
+
+      /* balayage tactile */
+      var x0 = null;
+      track.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; stop(); }, { passive: true });
+      track.addEventListener('touchend', function (e) {
+        if (x0 !== null) {
+          var dx = e.changedTouches[0].clientX - x0;
+          if (Math.abs(dx) > 45) go(dx < 0 ? index + 1 : index - 1);
+          x0 = null;
+        }
+        start();
+      }, { passive: true });
+
+      window.addEventListener('resize', function () { buildDots(); go(Math.min(index, maxIndex())); });
+      buildDots(); render(); start();
+    });
+  }
+
   function init() {
-    initGallery(); initCarousel(); initDropdown(); initDrawer(); initTabs(); initReveal(); initTimeline();
+    initGallery(); initCarousel(); initDropdown(); initDrawer(); initTabs();
+    initReveal(); initTimeline(); initReviews();
   }
   if (document.readyState !== 'loading') init();
   else document.addEventListener('DOMContentLoaded', init);
