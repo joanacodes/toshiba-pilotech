@@ -210,3 +210,13 @@ details summary::-webkit-details-marker{display:none}
 .mt-2{margin-top:.5rem}
 @media (min-width:768px){.md\:pb-36{padding-bottom:9rem}}
 @media (min-width:768px){.md\:py-16{padding-top:4rem;padding-bottom:4rem}}
+
+
+/* Accueil : bande d'atouts raccourcie + formulaire qui déborde à sa droite */
+@media (min-width:1024px){
+  .lg\:-mb-28{margin-bottom:-7rem}
+  .lg\:max-w-\[calc\(100\%-30rem\)\]{max-width:calc(100% - 30rem)}
+  .lg\:mr-auto{margin-right:auto}
+}
+.pb-16{padding-bottom:4rem}
+@media (min-width:768px){.md\:pb-20{padding-bottom:5rem}}
