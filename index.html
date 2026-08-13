@@ -7,7 +7,7 @@ image: "/assets/img/toshiba/daiseikai-10-toshiba-living-room.jpg"
 ---
 
     <section id="hero"
-      class="relative bg-dark min-h-[600px] md:min-h-[700px] flex items-center pt-12 pb-28 md:pb-32">
+      class="relative bg-dark flex items-center py-14 md:py-16 pb-32 md:pb-36">
       <div class="absolute inset-0 z-0"><img
           src="{{ '/assets/img/toshiba/encart-produit-shorai3-scaled.jpg' | relative_url }}"
           alt="technicien climatisation toshiba installation professionnelle"
@@ -78,13 +78,13 @@ image: "/assets/img/toshiba/daiseikai-10-toshiba-living-room.jpg"
         </div>
         <div class="hidden lg:block">
           <div id="iwg6i"
-            class="bg-secondary bg-opacity-90 p-8 rounded-lg shadow-xl backdrop-blur-sm ml-auto max-w-md lg:max-h-[calc(100vh-9rem)] lg:overflow-y-auto">
+            class="bg-secondary bg-opacity-90 p-6 rounded-lg shadow-xl backdrop-blur-sm ml-auto w-full max-w-md">
             <h3 class="text-white text-2xl font-bold mb-6">Obtenir un Devis
               Gratuit</h3>
-            <form action="{{ site.forms.endpoint_base }}{{ site.forms.destinataire }}" method="POST" class="space-y-4">
+            <form action="{{ site.forms.endpoint_base }}{{ site.forms.destinataire }}" method="POST" class="space-y-3">
                 {% include form-fields.html subject="Demande de devis — page d'accueil" %}
-                {% include form-body.html id_prefix="hero" theme="dark" %}
-                <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3 px-4 rounded mt-4 transition-colors">
+                {% include form-body.html id_prefix="hero" theme="dark" columns="2" %}
+                <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3 px-4 rounded mt-2 transition-colors">
                   Envoyer ma demande
                 </button>
               </form>

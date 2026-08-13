@@ -204,7 +204,9 @@ details summary::-webkit-details-marker{display:none}
 .pb-28{padding-bottom:7rem}
 @media (min-width:768px){.md\:min-h-\[700px\]{min-height:700px}.md\:pb-32{padding-bottom:8rem}}
 
-@media (min-width:1024px){
-  .lg\:max-h-\[calc\(100vh-9rem\)\]{max-height:calc(100vh - 9rem)}
-  .lg\:overflow-y-auto{overflow-y:auto}
-}
+
+.py-14{padding-top:3.5rem;padding-bottom:3.5rem}
+.pb-32{padding-bottom:8rem}
+.mt-2{margin-top:.5rem}
+@media (min-width:768px){.md\:pb-36{padding-bottom:9rem}}
+@media (min-width:768px){.md\:py-16{padding-top:4rem;padding-bottom:4rem}}

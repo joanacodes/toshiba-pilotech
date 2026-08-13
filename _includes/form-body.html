@@ -17,6 +17,9 @@ Paramètres : id_prefix (unique par page), theme = "dark" | "light" | "onblack"
   {%- assign note = "text-gray-600" -%}
 {%- endif -%}
 
+{%- if include.columns == "2" -%}{%- assign pair = "grid grid-cols-2 gap-3" -%}{%- else -%}{%- assign pair = "" -%}{%- endif -%}
+
+<div class="{{ pair }}">
 <div>
   <label for="{{ p }}-nom" class="{{ lab }}">Nom et prénom *</label>
   <input id="{{ p }}-nom" type="text" name="nom" required autocomplete="name"
@@ -28,6 +31,9 @@ Paramètres : id_prefix (unique par page), theme = "dark" | "light" | "onblack"
   <input id="{{ p }}-tel" type="tel" name="telephone" required autocomplete="tel"
     placeholder="06 12 34 56 78" class="{{ field }}">
 </div>
+</div>
+
+<div class="{{ pair }}">
 
 <div>
   <label for="{{ p }}-email" class="{{ lab }}">E-mail *</label>
@@ -38,7 +44,8 @@ Paramètres : id_prefix (unique par page), theme = "dark" | "light" | "onblack"
 <div>
   <label for="{{ p }}-ville" class="{{ lab }}">Ville *</label>
   <input id="{{ p }}-ville" type="text" name="ville" required autocomplete="address-level2"
-    placeholder="Paris, Boulogne, Versailles…" class="{{ field }}">
+    placeholder="Paris, Boulogne…" class="{{ field }}">
+</div>
 </div>
 
 <div>
@@ -57,7 +64,7 @@ Paramètres : id_prefix (unique par page), theme = "dark" | "light" | "onblack"
 
 <div>
   <label for="{{ p }}-desc" class="{{ lab }}">Description de votre projet *</label>
-  <textarea id="{{ p }}-desc" name="description" required rows="4"
+  <textarea id="{{ p }}-desc" name="description" required rows="{% if include.columns == '2' %}3{% else %}4{% endif %}"
     placeholder="Type de logement, surface, chauffage actuel, délais souhaités…"
     class="{{ field }}"></textarea>
 </div>
