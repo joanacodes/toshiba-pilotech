@@ -302,6 +302,7 @@
       }, { passive: true });
 
       window.addEventListener('resize', function () { buildDots(); go(Math.min(index, maxIndex())); });
+      root.setAttribute('data-reviews-ready','');
       buildDots(); render(); start();
     });
   }

@@ -265,9 +265,9 @@ details summary::-webkit-details-marker{display:none}
 /* ---- Carrousel d'avis : 2 cartes visibles, comme la maquette d'origine ---- */
 .reviews{position:relative}
 .reviews-track{display:flex;transition:transform .6s cubic-bezier(.16,1,.3,1);will-change:transform}
-.reviews-slide{flex:0 0 100%;min-width:0;box-sizing:border-box;display:flex;padding:0 1rem}
+.reviews-slide{flex-grow:0;flex-shrink:0;min-width:0;box-sizing:border-box}
 .reviews-slide>div{width:100%}
-@media (min-width:768px){.reviews-slide{flex-basis:50%}}
+
 /* la flèche décorative sous les cartes ne doit pas être rognée */
 .reviews{overflow:hidden;padding:0 1rem 2rem;margin:0 -1rem}
 .reviews-dot{width:12px;height:12px;border-radius:9999px;background:#d1d5db;transition:background .3s ease}
@@ -281,3 +281,9 @@ details summary::-webkit-details-marker{display:none}
 
 @media (min-width:640px){.sm\:items-end{align-items:flex-end}}
 @media (min-width:640px){.sm\:justify-between{justify-content:space-between}}
+
+@media (min-width:768px){.md\:w-1\/2{width:50%}}
+
+/* Si le JS ne s'exécute pas, le carrousel reste lisible (pas d'empilement infini) */
+.reviews:not([data-reviews-ready]) .reviews-track{flex-wrap:nowrap}
+.reviews:not([data-reviews-ready]) .reviews-slide:nth-child(n+3){display:none}

@@ -205,9 +205,9 @@ image: "/assets/img/toshiba/gainable-standard-photo-2-slideshow.jpg"
         </div>
 
         <div class="reviews" data-reviews data-reviews-interval="3000">
-          <div class="reviews-track" data-reviews-track>
+          <div class="reviews-track flex" data-reviews-track>
             {% for r in site.reviews %}
-            <div class="reviews-slide">
+            <div class="reviews-slide w-full md:w-1/2 shrink-0 px-4 flex">
               <div class="bg-white p-8 md:p-10 rounded-lg border border-gray-100 shadow-sm relative h-full flex flex-col">
                 <div class="absolute bottom-[-15px] left-10 w-8 h-8 bg-white border-b border-r border-gray-100 transform rotate-45"></div>
                 <p class="text-gray-600 mb-6 text-lg leading-relaxed flex-grow">« {{ r.text }} »</p>
