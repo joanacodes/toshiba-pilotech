@@ -270,3 +270,6 @@ details summary::-webkit-details-marker{display:none}
 @media (prefers-reduced-motion: reduce){.reviews-track{transition:none}}
 
 @media (min-width:768px){.md\:p-8{padding:2rem}}
+
+.max-h-72{max-height:18rem}
+@media (min-width:768px){.md\:max-h-none{max-height:none}}

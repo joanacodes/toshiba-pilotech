@@ -975,10 +975,11 @@ image: "/assets/img/toshiba/daiseikai-10-toshiba-living-room.jpg"
     <section id="cta" class="py-20 md:py-32 container mx-auto px-4 md:px-8">
       <div
         class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row border border-gray-100">
-        <div class="md:w-5/12 relative"><img
-            src="{{ '/assets/img/placeholder.svg' | relative_url }}"
-            alt="technicien climatisation toshiba souriant"
-            class="w-full h-full min-h-[300px] object-cover">
+        <div class="md:w-5/12 relative bg-gray-50 flex items-center justify-center p-8 md:p-10">
+          <img
+            src="{{ '/assets/img/toshiba/shorai-edga-main-photo.jpg' | relative_url }}"
+            alt="Toshiba Shorai Edge, unité murale noire mate"
+            class="w-full max-h-72 md:max-h-none object-contain">
           <div
             class="absolute bottom-0 left-0 bg-secondary text-white p-4 flex items-center w-full">
             <div
@@ -994,8 +995,7 @@ image: "/assets/img/toshiba/daiseikai-10-toshiba-living-room.jpg"
             <div>
               <div class="text-sm text-blue-200">
                 Appelez-nous</div>
-              <div class="font-bold text-lg">01 84 44
-                1253</div>
+              <a href="{{ site.company.phone_href }}" class="font-bold text-lg hover:text-primary transition">{{ site.company.phone }}</a>
             </div>
           </div>
         </div>
