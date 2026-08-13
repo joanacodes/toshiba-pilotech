@@ -214,9 +214,15 @@ details summary::-webkit-details-marker{display:none}
 
 /* Accueil : bande d'atouts raccourcie + formulaire qui déborde à sa droite */
 @media (min-width:1024px){
-  .lg\:-mb-28{margin-bottom:-7rem}
-  .lg\:max-w-\[calc\(100\%-30rem\)\]{max-width:calc(100% - 30rem)}
+  .lg\:-mb-24{margin-bottom:-6rem}
   .lg\:mr-auto{margin-right:auto}
 }
 .pb-16{padding-bottom:4rem}
 @media (min-width:768px){.md\:pb-20{padding-bottom:5rem}}
+
+.gap-4{gap:1rem}
+.h-12{height:3rem}
+.w-12{width:3rem}
+@media (min-width:640px){.sm\:border-b-0{border-bottom-width:0}.sm\:border-r{border-right-width:1px}}
+@media (min-width:1024px){.lg\:w-7\/12{width:58.333333%}.lg\:p-6{padding:1.5rem}.lg\:text-lg{font-size:1.125rem;line-height:1.75rem}}
+.text-base{font-size:1rem;line-height:1.5rem}
