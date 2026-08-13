@@ -168,8 +168,62 @@
     });
   }
 
+
+  /* Frise d'étapes : progression du trait rouge selon le défilement */
+  function initTimeline() {
+    var lines = document.querySelectorAll('[data-timeline]');
+    if (!lines.length) return;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    lines.forEach(function (line) {
+      var steps = Array.prototype.slice.call(line.querySelectorAll('[data-step]'));
+      if (!steps.length) return;
+      var horizontal = line.classList.contains('timeline-h');
+
+      function update() {
+        var trigger = window.innerHeight * 0.62;
+        var reached = 0;
+        steps.forEach(function (s, i) {
+          var top = s.getBoundingClientRect().top;
+          var on = top < trigger;
+          s.classList.toggle('is-active', on);
+          if (on) reached = i + 1;
+        });
+        /* le trait s'arrête au centre de la dernière pastille atteinte */
+        var pct = 0;
+        if (reached > 0) {
+          var lineBox = line.getBoundingClientRect();
+          var last = steps[reached - 1].getBoundingClientRect();
+          if (horizontal) {
+            pct = ((last.left + last.width / 2) - lineBox.left) / lineBox.width * 100;
+          } else {
+            pct = ((last.top + 28) - lineBox.top) / lineBox.height * 100;
+          }
+          pct = Math.max(0, Math.min(100, pct));
+        }
+        line.style.setProperty('--timeline-progress', pct + '%');
+      }
+
+      if (reduce) {
+        steps.forEach(function (s) { s.classList.add('is-active'); });
+        line.style.setProperty('--timeline-progress', '100%');
+        return;
+      }
+
+      var ticking = false;
+      function onScroll() {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(function () { update(); ticking = false; });
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      update();
+    });
+  }
+
   function init() {
-    initGallery(); initCarousel(); initDropdown(); initDrawer(); initTabs(); initReveal();
+    initGallery(); initCarousel(); initDropdown(); initDrawer(); initTabs(); initReveal(); initTimeline();
   }
   if (document.readyState !== 'loading') init();
   else document.addEventListener('DOMContentLoaded', init);

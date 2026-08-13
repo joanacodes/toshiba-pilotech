@@ -226,3 +226,29 @@ details summary::-webkit-details-marker{display:none}
 @media (min-width:640px){.sm\:border-b-0{border-bottom-width:0}.sm\:border-r{border-right-width:1px}}
 @media (min-width:1024px){.lg\:w-7\/12{width:58.333333%}.lg\:p-6{padding:1.5rem}.lg\:text-lg{font-size:1.125rem;line-height:1.75rem}}
 .text-base{font-size:1rem;line-height:1.5rem}
+
+
+/* ---- Frise d'étapes : le trait et les pastilles se colorent au défilement ---- */
+.timeline{position:relative}
+
+/* Frise verticale (accueil) */
+.timeline:not(.timeline-h)::before{content:"";position:absolute;top:0;bottom:0;left:27px;width:2px;background:#e5e7eb}
+.timeline:not(.timeline-h)::after{content:"";position:absolute;top:0;left:27px;width:2px;background:#E31837;
+  height:var(--timeline-progress,0%);transition:height .45s cubic-bezier(.16,1,.3,1)}
+
+/* Frise horizontale (pages services) */
+.timeline-h::before{content:"";position:absolute;top:24px;left:0;right:0;height:2px;background:#e5e7eb}
+.timeline-h::after{content:"";position:absolute;top:24px;left:0;height:2px;background:#E31837;
+  width:var(--timeline-progress,0%);transition:width .45s cubic-bezier(.16,1,.3,1)}
+@media (max-width:639px){.timeline-h::before,.timeline-h::after{display:none}}
+
+/* Pastilles : grises par défaut, rouges une fois atteintes */
+.timeline-dot{border-color:#e5e7eb;background:#fff;transition:border-color .35s ease,box-shadow .35s ease}
+.timeline-num{color:#9ca3af;transition:color .35s ease}
+.timeline-step.is-active .timeline-dot{border-color:#E31837;box-shadow:0 0 0 4px rgb(227 24 55 / .08)}
+.timeline-step.is-active .timeline-num{color:#E31837}
+
+@media (prefers-reduced-motion: reduce){
+  .timeline::after{transition:none}
+  .timeline-dot,.timeline-num{transition:none}
+}

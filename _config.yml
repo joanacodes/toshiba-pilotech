@@ -23,7 +23,7 @@ forms:
   # à l'adresse ci-dessus : il faut cliquer sur le lien une seule fois.
   endpoint_base: "https://formsubmit.co/"
 
-social: { facebook: "#", instagram: "#", linkedin: "#" }
+social: { instagram: "https://instagram.com/pilotech.eu", linkedin: "https://www.linkedin.com/in/fabrice-gibier-zlotnitzky-75b44a135/" }
 nav:
   - { title: "Accueil", url: "/" }
   - { title: "À propos", url: "/a-propos/" }
