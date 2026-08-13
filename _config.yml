@@ -28,7 +28,13 @@ nav:
   - { title: "Accueil", url: "/" }
   - { title: "À propos", url: "/a-propos/" }
   - { title: "Gammes Toshiba", url: "/gammes-toshiba/" }
+  - { title: "Services", url: "/services/climatisation-residentielle/" }
   - { title: "Contact", url: "/contact/" }
+services:
+  - { name: "Climatisation résidentielle", url: "/services/climatisation-residentielle/", desc: "Maison ou appartement, mono ou multisplit" }
+  - { name: "Pompes à chaleur", url: "/services/pompes-a-chaleur/", desc: "Chauffer et rafraîchir avec un seul appareil" }
+  - { name: "Solutions professionnelles", url: "/services/solutions-professionnelles/", desc: "Bureaux, commerces et locaux techniques" }
+
 products:
   - { name: "Shorai Edge", url: "/gammes/shorai-edge/", desc: "Lignes droites, finition mate, A+++", img: "/assets/img/toshiba/shorai-edga-main-photo.jpg" }
   - { name: "Shorai Curve", url: "/gammes/shorai-curve/", desc: "Design courbé, noir ou blanc mat", img: "/assets/img/toshiba/shorai-curve-noir-blanc.png" }

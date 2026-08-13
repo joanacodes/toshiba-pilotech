@@ -1,0 +1,137 @@
+---
+layout: default
+title: "Pompe à chaleur Toshiba : pose à Paris & en IDF"
+description: "Installation de pompes à chaleur air-air Toshiba à Paris et en Île-de-France. Chauffage performant jusqu'à -25 °C, classe A+++, étude et devis gratuits."
+permalink: /services/pompes-a-chaleur/
+breadcrumb: "Pompes à chaleur"
+image: "/assets/img/toshiba/super-heating.jpg"
+service_name: "Pompes à chaleur"
+service_type: "Installation de pompe à chaleur"
+---
+
+<!-- En-tête -->
+<section class="relative bg-dark text-white py-20 md:py-28 overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <img src="{{ '/assets/img/toshiba/super-heating.jpg' | relative_url }}"
+      alt="Pompe à chaleur Toshiba fonctionnant par grand froid" class="w-full h-full object-cover opacity-30">
+  </div>
+  <div class="container mx-auto px-4 md:px-8 relative z-10 max-w-3xl">
+    <span class="text-primary font-bold text-xs uppercase tracking-widest">Chauffage &amp; économies</span>
+    <h1 class="text-3xl md:text-5xl font-bold mt-3 mb-5 leading-tight">Pompes à chaleur air-air Toshiba</h1>
+    <p class="text-white/80 text-lg mb-8">
+      Le même appareil chauffe l'hiver et rafraîchit l'été, en consommant nettement moins qu'un
+      chauffage électrique classique. Installation par Pilotech à Paris et en Île-de-France.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href="{{ '/contact/' | relative_url }}" class="bg-primary hover:bg-primary-dark text-white font-bold py-3.5 px-8 rounded transition-colors text-center no-underline">Demander un devis gratuit</a>
+      <a href="{{ site.company.phone_href }}" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold py-3.5 px-8 rounded transition-colors text-center no-underline">{{ site.company.phone }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- Principe -->
+<section class="py-16 md:py-20">
+  <div class="container mx-auto px-4 md:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-primary font-bold text-xs uppercase tracking-widest">Le principe</span>
+        <h2 class="text-2xl md:text-3xl font-bold mt-2 mb-5">Récupérer la chaleur de l'air extérieur</h2>
+        <p class="text-gray-600 mb-4">
+          Une pompe à chaleur ne produit pas de chaleur : elle la déplace. Le groupe extérieur capte
+          les calories présentes dans l'air — même par température négative — et les restitue à l'intérieur.
+        </p>
+        <p class="text-gray-600 mb-6">
+          C'est ce qui explique son rendement : là où un convecteur électrique restitue au mieux
+          l'équivalent de ce qu'il consomme, une pompe à chaleur en restitue plusieurs fois plus.
+          Ce rapport s'exprime par le SCOP, indiqué sur chaque fiche produit.
+        </p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-gray-50 rounded-lg p-4 border border-gray-100">
+            <div class="text-2xl font-bold text-primary mb-1">Jusqu'à A+++</div>
+            <div class="text-sm text-gray-600">Classe énergétique en chauffage</div>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-4 border border-gray-100">
+            <div class="text-2xl font-bold text-primary mb-1">−25 °C</div>
+            <div class="text-sm text-gray-600">Fonctionnement garanti avec la gamme Super Heating</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-8 flex items-center justify-center border border-gray-100">
+        <img src="{{ '/assets/img/toshiba/ras-preshorai-ion-b-j2avrg-e-10-13-16-18-22k-odu-1.jpg' | relative_url }}"
+          alt="Groupe extérieur de pompe à chaleur Toshiba Inverter" loading="lazy" class="max-h-80 object-contain">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gammes adaptées -->
+<section class="py-16 md:py-20 bg-gray-50">
+  <div class="container mx-auto px-4 md:px-8">
+    <div class="max-w-3xl mb-12">
+      <span class="text-primary font-bold text-xs uppercase tracking-widest">Nos recommandations</span>
+      <h2 class="text-2xl md:text-3xl font-bold mt-2 mb-4">Les gammes les plus adaptées au chauffage</h2>
+      <p class="text-gray-600">
+        Toutes les unités Toshiba sont réversibles, mais certaines sont conçues pour privilégier
+        la performance en mode chauffage.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      {% for slug in "super-heating,daiseikai-10,shorai-edge" | split: "," %}
+        {% for p in site.products %}
+          {% if p.url contains slug %}
+          <a href="{{ p.url | relative_url }}" class="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group no-underline block">
+            <div class="h-48 bg-gray-50 flex items-center justify-center p-6">
+              <img src="{% if p.img contains 'http' %}{{ p.img }}{% else %}{{ p.img | relative_url }}{% endif %}"
+                alt="Toshiba {{ p.name }}" loading="lazy" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform">
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-lg mb-2 group-hover:text-primary transition">{{ p.name }}</h3>
+              <p class="text-gray-600 text-sm mb-4">{{ p.desc }}</p>
+              <span class="text-dark font-semibold text-sm">En savoir plus <i class="fa-solid fa-arrow-right text-xs ml-1"></i></span>
+            </div>
+          </a>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Ce qu'il faut savoir -->
+<section class="py-16 md:py-20">
+  <div class="container mx-auto px-4 md:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <div>
+        <span class="text-primary font-bold text-xs uppercase tracking-widest">Avant de vous décider</span>
+        <h2 class="text-2xl md:text-3xl font-bold mt-2 mb-6">Ce qu'une pompe à chaleur air-air fait — et ne fait pas</h2>
+        <div class="space-y-5">
+          <div>
+            <h3 class="font-bold mb-1">Elle chauffe l'air, pas l'eau</h3>
+            <p class="text-gray-600 text-sm">Une pompe à chaleur air-air ne produit pas d'eau chaude sanitaire et ne remplace pas des radiateurs à eau. Pour ces usages, c'est une pompe à chaleur air-eau qu'il faut envisager.</p>
+          </div>
+          <div>
+            <h3 class="font-bold mb-1">Le rendement baisse quand il gèle</h3>
+            <p class="text-gray-600 text-sm">C'est physique : plus l'air extérieur est froid, moins il contient de calories. Les gammes conçues pour le grand froid limitent cette baisse, sans la supprimer.</p>
+          </div>
+          <div>
+            <h3 class="font-bold mb-1">L'isolation conditionne le résultat</h3>
+            <p class="text-gray-600 text-sm">Dans un logement mal isolé, aucun système de chauffage ne donne sa pleine mesure. Nous vous le dirons franchement lors de la visite technique.</p>
+          </div>
+          <div>
+            <h3 class="font-bold mb-1">Le bruit se gère à l'installation</h3>
+            <p class="text-gray-600 text-sm">Le groupe extérieur produit un bruit de fonctionnement. Son emplacement et ses supports antivibratiles font toute la différence pour vous comme pour le voisinage.</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-dark text-white rounded-xl p-8">
+        <h3 class="text-xl font-bold mb-4">Une estimation adaptée à votre logement</h3>
+        <p class="text-white/70 mb-6">
+          Surface, isolation, exposition, mode de chauffage actuel : chaque situation donne un
+          résultat différent. Parlons-en.
+        </p>
+        <a href="{{ '/contact/' | relative_url }}" class="block w-full bg-primary hover:bg-primary-dark text-white text-center font-bold py-3.5 px-8 rounded transition-colors no-underline mb-3">Demander un devis gratuit</a>
+        <a href="{{ site.company.phone_href }}" class="block w-full bg-white/10 hover:bg-white/20 border border-white/30 text-white text-center font-medium py-3.5 px-8 rounded transition-colors no-underline">{{ site.company.phone }}</a>
+      </div>
+    </div>
+  </div>
+</section>

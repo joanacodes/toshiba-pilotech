@@ -128,6 +128,27 @@
 </script>
 {%- endif %}
 
+{%- if page.service_name %}
+<!-- Service -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ page.service_name }} Toshiba en Île-de-France",
+  "serviceType": "{{ page.service_type }}",
+  "description": "{{ d }}",
+  "url": "{{ canonical }}",
+  "image": "{{ ogimg }}",
+  "provider": { "@id": "{{ '/' | absolute_url }}#business" },
+  "areaServed": [
+    { "@type": "City", "name": "Paris" },
+    { "@type": "AdministrativeArea", "name": "Île-de-France" }
+  ],
+  "brand": { "@type": "Brand", "name": "Toshiba" }
+}
+</script>
+{%- endif %}
+
 {%- if page.url != '/' %}
 <!-- Fil d'Ariane -->
 <script type="application/ld+json">
@@ -139,6 +160,9 @@
     {%- if page.product_name -%}
     ,{ "@type": "ListItem", "position": 2, "name": "Gammes Toshiba", "item": "{{ '/gammes-toshiba/' | absolute_url }}" },
     { "@type": "ListItem", "position": 3, "name": "{{ page.product_name }}", "item": "{{ canonical }}" }
+    {%- elsif page.service_name -%}
+    ,{ "@type": "ListItem", "position": 2, "name": "Services", "item": "{{ '/services/climatisation-residentielle/' | absolute_url }}" },
+    { "@type": "ListItem", "position": 3, "name": "{{ page.service_name }}", "item": "{{ canonical }}" }
     {%- else -%}
     ,{ "@type": "ListItem", "position": 2, "name": "{{ page.breadcrumb | default: t | split: ' —' | first }}", "item": "{{ canonical }}" }
     {%- endif %}
