@@ -32,9 +32,6 @@ image: "/assets/img/toshiba/gainable-standard-photo-2-slideshow.jpg"
     </section>
 
     <!-- Hero Image Banner -->
-    <section id="hero-banner" class="w-full h-[500px] md:h-[600px] overflow-hidden">
-        <img class="w-full h-full object-cover" src="{{ '/assets/img/placeholder.svg' | relative_url }}" alt="professional HVAC technician in hardhat working on air conditioning unit on rooftop, focused, high q" />
-    </section>
 
     <!-- About Company Section -->
     <section id="about-company" class="py-24 bg-white">
@@ -60,7 +57,7 @@ image: "/assets/img/toshiba/gainable-standard-photo-2-slideshow.jpg"
                 </div>
                 <!-- Center Image -->
                 <div class="relative h-[500px] rounded-lg overflow-hidden">
-                    <img class="w-full h-full object-cover" src="{{ '/assets/img/placeholder.svg' | relative_url }}" alt="HVAC technician installing air conditioning system indoors, professional work, high quality photogra" />
+                    <img class="w-full h-full object-cover" src="{{ '/assets/img/toshiba/daiseikai-10-toshiba-livingroom-2.jpg' | relative_url }}" alt="Climatisation Toshiba installée par Pilotech" />
                 </div>
                 <!-- Right Process -->
                 <div class="space-y-10">
@@ -129,85 +126,61 @@ image: "/assets/img/toshiba/gainable-standard-photo-2-slideshow.jpg"
     </section>
 
     <!-- Latest Projects -->
-    <section id="latest-projects" class="py-24 bg-white">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="flex justify-between items-end mb-12">
-                <div>
-                    <div class="inline-flex items-center text-primary font-medium mb-2">
-                        <i class="fa-solid fa-wind mr-2"></i> Nos Projets
-                    </div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-dark">Découvrez nos<br>Derniers Projets</h2>
-                </div>
-                <a href="{{ '/contact/' | relative_url }}" class="bg-primary hover:bg-red-700 text-white font-medium py-3 px-8 rounded transition-colors hidden md:inline-block">
-                    Voir Tous les Projets
-                </a>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="h-80 rounded-lg overflow-hidden">
-                    <img class="w-full h-full object-cover" src="{{ '/assets/img/placeholder.svg' | relative_url }}" alt="smiling HVAC technician in hardhat looking at camera, professional portrait, high quality" />
-                </div>
-                <div class="h-80 rounded-lg overflow-hidden relative group">
-                    <img class="w-full h-full object-cover" src="{{ '/assets/img/placeholder.svg' | relative_url }}" alt="blue tinted industrial HVAC system installation, large mechanical room, professional photography" />
-                    <div class="absolute top-4 left-4 bg-dark text-white text-xs font-medium px-3 py-1 rounded">Rénovation</div>
-                    <div class="absolute bottom-0 left-0 right-0 bg-dark p-6">
-                        <p class="text-gray-400 text-sm mb-2">23 Juin 2025 — Paris, France</p>
-                        <h3 class="text-xl font-bold text-white">Installation Climatisation</h3>
-                    </div>
-                </div>
-                <div class="h-80 rounded-lg overflow-hidden">
-                    <img class="w-full h-full object-cover" src="{{ '/assets/img/placeholder.svg' | relative_url }}" alt="HVAC technician checking air conditioning unit with diagnostic tool, professional work" />
-                </div>
-            </div>
-            <div class="flex justify-center mt-10 gap-4">
-                <button class="w-12 h-12 bg-secondary text-white rounded flex items-center justify-center hover:bg-primary transition-colors"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="w-12 h-12 bg-secondary text-white rounded flex items-center justify-center hover:bg-primary transition-colors"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
+    <!-- Articles du blog -->
+    <section class="py-16 md:py-20">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-6">
+          <div>
+            <span class="text-primary font-bold text-xs uppercase tracking-widest">Conseils &amp; actualités</span>
+            <h2 class="text-2xl md:text-4xl font-bold mt-2 leading-tight">Nos derniers articles</h2>
+          </div>
+          <a href="{{ '/blog/' | relative_url }}" class="bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded transition-colors no-underline shrink-0 text-center">
+            Voir tous les articles
+          </a>
         </div>
+        <div class="grid md:grid-cols-3 gap-8">
+        <a href="{{ '/blog/technologie-maison-connectee/' | relative_url }}" class="group no-underline block bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-52 bg-gray-50 overflow-hidden">
+            <img src="{{ '/assets/img/toshiba/daiseikai-10-toshiba-living-room.jpg' | relative_url }}" alt="Technologie maison connectée pour un confort optimal" loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3">Confort connecté</span>
+            <h3 class="font-bold text-lg leading-tight mb-3 group-hover:text-primary transition">Technologie maison connectée pour un confort optimal</h3>
+            <p class="text-gray-600 text-sm mb-4">Piloter sa climatisation depuis son smartphone change la façon de consommer : programmation, suivi et absence maîtrisée.</p>
+            <span class="text-dark font-semibold text-sm">Lire l'article <i class="fa-solid fa-arrow-right text-xs ml-1"></i></span>
+          </div>
+        </a>
+        <a href="{{ '/blog/' | relative_url }}" class="group no-underline block bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-52 bg-gray-50 overflow-hidden">
+            <img src="{{ '/assets/img/toshiba/naka-schema-multi.jpg' | relative_url }}" alt="Comment choisir sa climatisation en 2026" loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3">Guide d'achat</span>
+            <h3 class="font-bold text-lg leading-tight mb-3 group-hover:text-primary transition">Comment choisir sa climatisation en 2026</h3>
+            <p class="text-gray-600 text-sm mb-4">Monosplit, multisplit ou gainable : les critères qui comptent vraiment selon la configuration de votre logement.</p>
+            <span class="text-dark font-semibold text-sm">Lire l'article <i class="fa-solid fa-arrow-right text-xs ml-1"></i></span>
+          </div>
+        </a>
+        <a href="{{ '/blog/' | relative_url }}" class="group no-underline block bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-52 bg-gray-50 overflow-hidden">
+            <img src="{{ '/assets/img/toshiba/super-heating.jpg' | relative_url }}" alt="Les avantages de la pompe à chaleur air-air" loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3">Économies d'énergie</span>
+            <h3 class="font-bold text-lg leading-tight mb-3 group-hover:text-primary transition">Les avantages de la pompe à chaleur air-air</h3>
+            <p class="text-gray-600 text-sm mb-4">Chauffer et rafraîchir avec un seul appareil : ce que cela change sur la facture, et les limites à connaître.</p>
+            <span class="text-dark font-semibold text-sm">Lire l'article <i class="fa-solid fa-arrow-right text-xs ml-1"></i></span>
+          </div>
+        </a>
+        </div>
+      </div>
     </section>
 
     <!-- History Section -->
-    <section id="history" class="py-24 bg-dark relative overflow-hidden">
-        <div id="ik76nv" class="absolute inset-0 opacity-10"></div>
-        <div class="container mx-auto px-4 md:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <div class="inline-flex items-center text-primary font-medium mb-2">
-                    <i class="fa-solid fa-wind mr-2"></i> Notre Histoire
-                </div>
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Un Héritage d'Excellence</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">
-                    Des décennies de services CVC de confiance, alliant qualité, sécurité et solutions innovantes pour chaque client.
-                </p>
-            </div>
-            <!-- Timeline Tabs -->
-            <div class="flex flex-wrap bg-[#1C1C1C] rounded-t-lg overflow-hidden border-b border-gray-800">
-                <button class="flex-1 py-4 px-6 bg-primary text-white font-medium text-center">2016</button>
-                <button class="flex-1 py-4 px-6 text-gray-400 hover:text-white hover:bg-[#2A2A2A] font-medium text-center transition-colors">2019</button>
-                <button class="flex-1 py-4 px-6 text-gray-400 hover:text-white hover:bg-[#2A2A2A] font-medium text-center transition-colors">2021</button>
-                <button class="flex-1 py-4 px-6 text-gray-400 hover:text-white hover:bg-[#2A2A2A] font-medium text-center transition-colors">2023</button>
-                <button class="flex-1 py-4 px-6 text-gray-400 hover:text-white hover:bg-[#2A2A2A] font-medium text-center transition-colors">2025</button>
-            </div>
-            <!-- Timeline Content -->
-            <div class="bg-white p-10 md:p-16 rounded-b-lg">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h3 class="text-3xl font-bold text-dark mb-4">Poser les Bases du Succès</h3>
-                        <p class="text-gray-600 mb-8">
-                            Bâtir la confiance avec des solutions CVC de qualité, en garantissant fiabilité, sécurité et satisfaction client dans chaque projet.
-                        </p>
-                        <ul class="space-y-4 text-dark font-medium">
-                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-primary mr-3"></i> Processus d'Installation Efficaces</li>
-                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-primary mr-3"></i> Services de Maintenance Fiables</li>
-                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-primary mr-3"></i> Focus sur les Tâches à Fort Impact</li>
-                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-primary mr-3"></i> Stratégies de Prévention des Risques</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <img class="w-full h-[300px] object-cover rounded-lg" src="{{ '/assets/img/placeholder.svg' | relative_url }}" alt="three engineers in hardhats examining large HVAC industrial control system, professional team, high " />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Testimonials -->
     <section id="testimonials" class="py-24 bg-light">
@@ -235,7 +208,7 @@ image: "/assets/img/toshiba/gainable-standard-photo-2-slideshow.jpg"
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
                     <div class="flex items-center mt-8">
-                        <img src="{{ '/assets/img/placeholder.svg' | relative_url }}" alt="Sophie Martin" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <span class="w-12 h-12 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center shrink-0" aria-hidden="true">SM</span>
                         <div>
                             <h4 class="font-bold text-dark">Sophie Martin</h4>
                             <p class="text-gray-500 text-sm">Architecte d'Intérieur</p>
@@ -252,7 +225,7 @@ image: "/assets/img/toshiba/gainable-standard-photo-2-slideshow.jpg"
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
                     <div class="flex items-center mt-8">
-                        <img src="{{ '/assets/img/placeholder.svg' | relative_url }}" alt="Marc Dupont" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <span class="w-12 h-12 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center shrink-0" aria-hidden="true">MD</span>
                         <div>
                             <h4 class="font-bold text-dark">Marc Dupont</h4>
                             <p class="text-gray-500 text-sm">Gestionnaire Immobilier</p>
@@ -282,58 +255,90 @@ image: "/assets/img/toshiba/gainable-standard-photo-2-slideshow.jpg"
                     </div>
                     <h2 class="text-3xl md:text-4xl font-bold text-dark mb-10">Vous Avez des Questions sur Nos Services ?</h2>
                     <div class="space-y-4">
-                        <div class="border border-gray-200 rounded-lg p-5 cursor-pointer hover:border-primary transition-colors">
-                            <div class="flex justify-between items-center">
-                                <h3 class="font-bold text-dark">Comment préparer une intervention CVC ?</h3>
-                                <i class="fa-solid fa-plus text-gray-400"></i>
-                            </div>
-                        </div>
-                        <div class="border border-gray-200 rounded-lg p-5 cursor-pointer hover:border-primary transition-colors">
-                            <div class="flex justify-between items-center">
-                                <h3 class="font-bold text-dark">Quels sont les signes d'un problème de climatisation ?</h3>
-                                <i class="fa-solid fa-plus text-gray-400"></i>
-                            </div>
-                        </div>
-                        <div class="border border-gray-200 rounded-lg p-5 cursor-pointer hover:border-primary transition-colors">
-                            <div class="flex justify-between items-center">
-                                <h3 class="font-bold text-dark">Comment choisir le bon technicien CVC ?</h3>
-                                <i class="fa-solid fa-plus text-gray-400"></i>
-                            </div>
-                        </div>
-                        <div class="border border-gray-200 rounded-lg p-5 cursor-pointer hover:border-primary transition-colors">
-                            <div class="flex justify-between items-center">
-                                <h3 class="font-bold text-dark">Quelles sont les mises à niveau CVC les plus courantes ?</h3>
-                                <i class="fa-solid fa-plus text-gray-400"></i>
-                            </div>
-                        </div>
-                        <div class="border border-gray-200 rounded-lg p-5 cursor-pointer hover:border-primary transition-colors">
-                            <div class="flex justify-between items-center">
-                                <h3 class="font-bold text-dark">Comment entretenir son système de chauffage à domicile ?</h3>
-                                <i class="fa-solid fa-plus text-gray-400"></i>
-                            </div>
-                        </div>
-                    </div>
+            <details class="group border border-gray-200 rounded-lg hover:border-primary transition-colors">
+              <summary class="flex justify-between items-center gap-4 p-5 cursor-pointer list-none">
+                <h3 class="font-bold text-dark">Quelle différence entre monosplit et multisplit ?</h3>
+                <i class="fa-solid fa-plus text-gray-400 shrink-0 group-open:hidden"></i>
+                <i class="fa-solid fa-minus text-primary shrink-0 hidden group-open:block"></i>
+              </summary>
+              <div class="px-5 pb-5 -mt-1 text-gray-600 text-sm leading-relaxed">Un monosplit relie une seule unité intérieure à un groupe extérieur : c'est la solution pour traiter une pièce, la plus simple et la plus économique. Un multisplit raccorde jusqu'à cinq unités intérieures sur un même groupe extérieur, chacune réglable indépendamment. L'intérêt est double : une seule machine en façade, et un coût inférieur à celui de plusieurs monosplits.</div>
+            </details>
+            <details class="group border border-gray-200 rounded-lg hover:border-primary transition-colors">
+              <summary class="flex justify-between items-center gap-4 p-5 cursor-pointer list-none">
+                <h3 class="font-bold text-dark">Une climatisation Toshiba chauffe-t-elle vraiment en hiver ?</h3>
+                <i class="fa-solid fa-plus text-gray-400 shrink-0 group-open:hidden"></i>
+                <i class="fa-solid fa-minus text-primary shrink-0 hidden group-open:block"></i>
+              </summary>
+              <div class="px-5 pb-5 -mt-1 text-gray-600 text-sm leading-relaxed">Oui, toutes les gammes que nous installons sont réversibles. Le même appareil rafraîchit l'été et chauffe l'hiver, avec un rendement bien supérieur à un convecteur électrique. La gamme Super Heating est spécialement conçue pour maintenir ses performances par grand froid, jusqu'à −25 °C extérieurs. Attention toutefois : une pompe à chaleur air-air ne produit pas d'eau chaude sanitaire.</div>
+            </details>
+            <details class="group border border-gray-200 rounded-lg hover:border-primary transition-colors">
+              <summary class="flex justify-between items-center gap-4 p-5 cursor-pointer list-none">
+                <h3 class="font-bold text-dark">Quel modèle choisir pour une chambre ?</h3>
+                <i class="fa-solid fa-plus text-gray-400 shrink-0 group-open:hidden"></i>
+                <i class="fa-solid fa-minus text-primary shrink-0 hidden group-open:block"></i>
+              </summary>
+              <div class="px-5 pb-5 -mt-1 text-gray-600 text-sm leading-relaxed">Le critère décisif est le bruit. Les gammes Yukai, Naka, Shorai Edge et Shorai Curve descendent à 19 dB(A) en mode nuit, soit un niveau proche du silence. Si l'esthétique compte autant que la discrétion, le Haori se personnalise avec quinze coloris d'habillage textile, et le Shorai Curve joue sur des lignes courbes en noir ou blanc mat.</div>
+            </details>
+            <details class="group border border-gray-200 rounded-lg hover:border-primary transition-colors">
+              <summary class="flex justify-between items-center gap-4 p-5 cursor-pointer list-none">
+                <h3 class="font-bold text-dark">Peut-on installer une climatisation sans travaux visibles ?</h3>
+                <i class="fa-solid fa-plus text-gray-400 shrink-0 group-open:hidden"></i>
+                <i class="fa-solid fa-minus text-primary shrink-0 hidden group-open:block"></i>
+              </summary>
+              <div class="px-5 pb-5 -mt-1 text-gray-600 text-sm leading-relaxed">C'est le principe des gainables. L'unité se loge dans un faux plafond ou dans les combles, et seules les grilles de soufflage restent apparentes. Le gainable compact convient aux hauteurs réduites, le gainable standard aux grandes surfaces avec un pilotage par zones en option. Cette solution demande en revanche un chantier plus lourd qu'un mural.</div>
+            </details>
+            <details class="group border border-gray-200 rounded-lg hover:border-primary transition-colors">
+              <summary class="flex justify-between items-center gap-4 p-5 cursor-pointer list-none">
+                <h3 class="font-bold text-dark">Faut-il une autorisation en copropriété ?</h3>
+                <i class="fa-solid fa-plus text-gray-400 shrink-0 group-open:hidden"></i>
+                <i class="fa-solid fa-minus text-primary shrink-0 hidden group-open:block"></i>
+              </summary>
+              <div class="px-5 pb-5 -mt-1 text-gray-600 text-sm leading-relaxed">Le plus souvent, oui : le groupe extérieur modifie l'aspect de la façade ou du balcon, ce qui relève d'une décision d'assemblée générale. Les règles varient d'un immeuble à l'autre selon le règlement de copropriété. Nous vous aidons à constituer le dossier technique à présenter, mais la démarche auprès du syndic vous revient.</div>
+            </details>
+            <details class="group border border-gray-200 rounded-lg hover:border-primary transition-colors">
+              <summary class="flex justify-between items-center gap-4 p-5 cursor-pointer list-none">
+                <h3 class="font-bold text-dark">Que signifient les classes A+++ et le SCOP ?</h3>
+                <i class="fa-solid fa-plus text-gray-400 shrink-0 group-open:hidden"></i>
+                <i class="fa-solid fa-minus text-primary shrink-0 hidden group-open:block"></i>
+              </summary>
+              <div class="px-5 pb-5 -mt-1 text-gray-600 text-sm leading-relaxed">L'étiquette énergétique classe l'appareil de A+++ à D, séparément en chauffage et en rafraîchissement. Le SCOP mesure le rendement saisonnier en chauffage : un SCOP de 5,1 signifie que l'appareil restitue en moyenne 5,1 kWh de chaleur pour 1 kWh d'électricité consommé. Le SEER est son équivalent pour le froid. Ces valeurs figurent sur chaque fiche produit du site.</div>
+            </details>
+            <details class="group border border-gray-200 rounded-lg hover:border-primary transition-colors">
+              <summary class="flex justify-between items-center gap-4 p-5 cursor-pointer list-none">
+                <h3 class="font-bold text-dark">L'entretien annuel est-il obligatoire ?</h3>
+                <i class="fa-solid fa-plus text-gray-400 shrink-0 group-open:hidden"></i>
+                <i class="fa-solid fa-minus text-primary shrink-0 hidden group-open:block"></i>
+              </summary>
+              <div class="px-5 pb-5 -mt-1 text-gray-600 text-sm leading-relaxed">Pour les installations dont la charge en fluide frigorigène dépasse un certain seuil, un contrôle d'étanchéité périodique est imposé par la réglementation. En deçà, l'entretien n'est pas obligatoire mais reste vivement conseillé : nettoyage des filtres, contrôle des pressions et vérification des condensats préservent les performances et la qualité de l'air intérieur.</div>
+            </details>
+            <details class="group border border-gray-200 rounded-lg hover:border-primary transition-colors">
+              <summary class="flex justify-between items-center gap-4 p-5 cursor-pointer list-none">
+                <h3 class="font-bold text-dark">Peut-on piloter sa climatisation à distance ?</h3>
+                <i class="fa-solid fa-plus text-gray-400 shrink-0 group-open:hidden"></i>
+                <i class="fa-solid fa-minus text-primary shrink-0 hidden group-open:block"></i>
+              </summary>
+              <div class="px-5 pb-5 -mt-1 text-gray-600 text-sm leading-relaxed">Oui. Toutes les gammes que nous installons sont compatibles avec l'application Toshiba Home AC Control, en Wi-Fi intégré ou via une interface à ajouter selon les modèles. Vous réglez la température avant de rentrer, programmez des plages horaires et suivez votre consommation depuis votre smartphone.</div>
+            </details>
+            <details class="group border border-gray-200 rounded-lg hover:border-primary transition-colors">
+              <summary class="flex justify-between items-center gap-4 p-5 cursor-pointer list-none">
+                <h3 class="font-bold text-dark">Combien de temps dure l'installation ?</h3>
+                <i class="fa-solid fa-plus text-gray-400 shrink-0 group-open:hidden"></i>
+                <i class="fa-solid fa-minus text-primary shrink-0 hidden group-open:block"></i>
+              </summary>
+              <div class="px-5 pb-5 -mt-1 text-gray-600 text-sm leading-relaxed">Comptez en général une journée pour un monosplit, deux à trois jours pour un multisplit ou un gainable. La visite technique préalable permet d'annoncer une durée ferme : elle sert justement à repérer les passages de liaisons frigorifiques et les contraintes du chantier.</div>
+            </details>
+          </div>
+          
                 </div>
                 <!-- Contact Form -->
                 <div class="bg-[#1C1C1C] p-10 rounded-lg text-white">
                     <h3 class="text-3xl font-bold mb-4">Posez Votre Question !</h3>
                     <p class="text-gray-400 mb-8 text-sm">Remplissez le formulaire pour une assistance rapide et un support expert.</p>
                     <form action="{{ site.forms.endpoint_base }}{{ site.forms.destinataire }}" method="POST" class="space-y-4">
-              {% include form-fields.html subject="Message — page À propos" %}
-              <label for="ap-nom" class="sr-only">Nom</label>
-              <input id="ap-nom" type="text" name="nom" required placeholder="Nom" class="w-full bg-[#2A2A2A] border border-gray-700 text-white placeholder-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary">
-              <label for="ap-email" class="sr-only">Adresse e-mail</label>
-              <input id="ap-email" type="email" name="email" required placeholder="Adresse e-mail" class="w-full bg-[#2A2A2A] border border-gray-700 text-white placeholder-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary">
-              <label for="ap-objet" class="sr-only">Objet</label>
-              <input id="ap-objet" type="text" name="objet" placeholder="Objet de votre demande" class="w-full bg-[#2A2A2A] border border-gray-700 text-white placeholder-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary">
-              <label for="ap-msg" class="sr-only">Message</label>
-              <textarea id="ap-msg" name="message" required placeholder="Tapez votre message ici..." rows="4" class="w-full bg-[#2A2A2A] border border-gray-700 text-white placeholder-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary resize-none"></textarea>
-              <label class="flex items-start gap-3 text-xs text-gray-400">
-                <input type="checkbox" name="consentement" value="oui" required class="mt-0.5 shrink-0">
-                <span>J'accepte que mes données soient utilisées pour traiter ma demande. *</span>
-              </label>
+              {% include form-fields.html subject="Demande — page À propos" %}
+              {% include form-body.html id_prefix="ap" theme="onblack" %}
               <button type="submit" class="bg-primary hover:bg-primary-dark text-white font-medium py-3 px-8 rounded transition-colors mt-4 inline-block">
-                Envoyer le message
+                Envoyer ma demande
               </button>
             </form>
                 </div>
@@ -347,8 +352,8 @@ image: "/assets/img/toshiba/gainable-standard-photo-2-slideshow.jpg"
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-white mb-8 md:mb-0 max-w-xl">
                     <p class="text-gray-300 mb-2 font-medium">Prêt à travailler avec nous ?</p>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6">info@voltsflow.com</h2>
-                    <p class="text-gray-400 text-sm">Des solutions CVC fiables pour les maisons et les entreprises — sûres, efficaces et parfaitement installées. Contactez-nous dès aujourd'hui !</p>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">{{ site.company.email }}</h2>
+                    <p class="text-gray-400 text-sm">Installation, entretien et dépannage de climatisation Toshiba à Paris et en Île-de-France. Devis gratuit sous 24 heures ouvrées.</p>
                 </div>
                 <div class="text-center md:text-right">
                     <h2 class="text-4xl md:text-6xl font-bold text-white mb-6">Contactez-Nous</h2>

@@ -83,31 +83,7 @@ image: "/assets/img/toshiba/daiseikai-10-toshiba-living-room.jpg"
               Gratuit</h3>
             <form action="{{ site.forms.endpoint_base }}{{ site.forms.destinataire }}" method="POST" class="space-y-4">
                 {% include form-fields.html subject="Demande de devis — page d'accueil" %}
-                <div><label for="hero-nom" class="block text-white text-sm mb-1">Nom complet *</label>
-                  <input id="hero-nom" type="text" name="nom" required placeholder="Votre nom"
-                    class="w-full bg-blue-800 bg-opacity-50 border border-blue-400 text-white placeholder-blue-300 rounded px-4 py-2 focus:outline-none focus:border-white"></div>
-                <div><label for="hero-tel" class="block text-white text-sm mb-1">Téléphone *</label>
-                  <input id="hero-tel" type="tel" name="telephone" required placeholder="Votre numéro"
-                    class="w-full bg-blue-800 bg-opacity-50 border border-blue-400 text-white placeholder-blue-300 rounded px-4 py-2 focus:outline-none focus:border-white"></div>
-                <div><label for="hero-email" class="block text-white text-sm mb-1">E-mail *</label>
-                  <input id="hero-email" type="email" name="email" required placeholder="vous@exemple.fr"
-                    class="w-full bg-blue-800 bg-opacity-50 border border-blue-400 text-white placeholder-blue-300 rounded px-4 py-2 focus:outline-none focus:border-white"></div>
-                <div><label for="hero-log" class="block text-white text-sm mb-1">Type de logement *</label>
-                  <select id="hero-log" name="type_de_logement" required
-                    class="w-full bg-blue-800 bg-opacity-50 border border-blue-400 text-white rounded px-4 py-2 focus:outline-none focus:border-white appearance-none">
-                    <option value="" disabled selected>Sélectionnez votre logement</option>
-                    <option value="appartement">Appartement</option>
-                    <option value="maison">Maison</option>
-                    <option value="professionnel">Professionnel</option>
-                  </select></div>
-                <div><label for="hero-cp" class="block text-white text-sm mb-1">Code postal *</label>
-                  <input id="hero-cp" type="text" name="code_postal" required pattern="[0-9]{5}" placeholder="75001"
-                    class="w-full bg-blue-800 bg-opacity-50 border border-blue-400 text-white placeholder-blue-300 rounded px-4 py-2 focus:outline-none focus:border-white"></div>
-        <label class="flex items-start gap-3 text-xs text-blue-100">
-          <input type="checkbox" name="consentement" value="oui" required class="mt-0.5 shrink-0">
-          <span>J'accepte que mes données soient utilisées pour traiter ma demande de devis.
-            Elles ne sont jamais transmises à des tiers. *</span>
-        </label>
+                {% include form-body.html id_prefix="hero" theme="dark" %}
                 <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3 px-4 rounded mt-4 transition-colors">
                   Envoyer ma demande
                 </button>

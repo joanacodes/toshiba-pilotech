@@ -1,0 +1,62 @@
+{%- comment -%}
+Corps commun à tous les formulaires de devis.
+Paramètres : id_prefix (unique par page), theme = "dark" | "light" | "onblack"
+{%- endcomment -%}
+{%- assign p = include.id_prefix -%}
+{%- if include.theme == "dark" -%}
+  {%- assign field = "w-full bg-blue-800 bg-opacity-50 border border-blue-400 text-white placeholder-blue-300 rounded px-4 py-2.5 focus:outline-none focus:border-white" -%}
+  {%- assign lab = "block text-white text-sm mb-1 font-medium" -%}
+  {%- assign note = "text-blue-100" -%}
+{%- elsif include.theme == "onblack" -%}
+  {%- assign field = "w-full bg-[#2A2A2A] border border-gray-700 text-white placeholder-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary" -%}
+  {%- assign lab = "block text-white text-sm mb-1 font-medium" -%}
+  {%- assign note = "text-gray-400" -%}
+{%- else -%}
+  {%- assign field = "w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary transition" -%}
+  {%- assign lab = "block text-sm font-semibold mb-2" -%}
+  {%- assign note = "text-gray-600" -%}
+{%- endif -%}
+
+<div>
+  <label for="{{ p }}-nom" class="{{ lab }}">Nom et prénom *</label>
+  <input id="{{ p }}-nom" type="text" name="nom" required autocomplete="name"
+    placeholder="Votre nom" class="{{ field }}">
+</div>
+
+<div>
+  <label for="{{ p }}-tel" class="{{ lab }}">Téléphone *</label>
+  <input id="{{ p }}-tel" type="tel" name="telephone" required autocomplete="tel"
+    placeholder="06 12 34 56 78" class="{{ field }}">
+</div>
+
+<div>
+  <label for="{{ p }}-ville" class="{{ lab }}">Ville *</label>
+  <input id="{{ p }}-ville" type="text" name="ville" required autocomplete="address-level2"
+    placeholder="Paris, Boulogne, Versailles…" class="{{ field }}">
+</div>
+
+<div>
+  <label for="{{ p }}-pieces" class="{{ lab }}">Nombre de pièces à équiper *</label>
+  <select id="{{ p }}-pieces" name="nombre_de_pieces" required class="{{ field }}">
+    <option value="" disabled selected>Sélectionnez</option>
+    <option value="1 pièce">1 pièce</option>
+    <option value="2 pièces">2 pièces</option>
+    <option value="3 pièces">3 pièces</option>
+    <option value="4 pièces">4 pièces</option>
+    <option value="5 pièces">5 pièces</option>
+    <option value="6 pièces">6 pièces</option>
+    <option value="Plus de 6 pièces">Plus de 6 pièces</option>
+  </select>
+</div>
+
+<div>
+  <label for="{{ p }}-desc" class="{{ lab }}">Description de votre projet *</label>
+  <textarea id="{{ p }}-desc" name="description" required rows="4"
+    placeholder="Type de logement, surface, chauffage actuel, délais souhaités…"
+    class="{{ field }}"></textarea>
+</div>
+
+<label class="flex items-start gap-3 text-xs {{ note }}">
+  <input type="checkbox" name="consentement" value="oui" required class="mt-0.5 shrink-0">
+  <span>J'accepte que mes données soient utilisées pour traiter ma demande. Elles ne sont jamais transmises à des tiers. *</span>
+</label>
