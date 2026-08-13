@@ -30,6 +30,12 @@ Paramètres : id_prefix (unique par page), theme = "dark" | "light" | "onblack"
 </div>
 
 <div>
+  <label for="{{ p }}-email" class="{{ lab }}">E-mail *</label>
+  <input id="{{ p }}-email" type="email" name="email" required autocomplete="email"
+    placeholder="vous@exemple.fr" class="{{ field }}">
+</div>
+
+<div>
   <label for="{{ p }}-ville" class="{{ lab }}">Ville *</label>
   <input id="{{ p }}-ville" type="text" name="ville" required autocomplete="address-level2"
     placeholder="Paris, Boulogne, Versailles…" class="{{ field }}">

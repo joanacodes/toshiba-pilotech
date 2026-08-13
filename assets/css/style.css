@@ -199,3 +199,12 @@ details summary::-webkit-details-marker{display:none}
 .list-none{list-style-type:none}
 .pb-5{padding-bottom:1.25rem}
 @media (min-width:768px){.md\:items-end{align-items:flex-end}.md\:justify-between{justify-content:space-between}}
+
+.min-h-\[600px\]{min-height:600px}
+.pb-28{padding-bottom:7rem}
+@media (min-width:768px){.md\:min-h-\[700px\]{min-height:700px}.md\:pb-32{padding-bottom:8rem}}
+
+@media (min-width:1024px){
+  .lg\:max-h-\[calc\(100vh-9rem\)\]{max-height:calc(100vh - 9rem)}
+  .lg\:overflow-y-auto{overflow-y:auto}
+}
